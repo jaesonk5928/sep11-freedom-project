@@ -1,19 +1,22 @@
 # Tool Learning Log
 
-## Tool: **X**
+## Tool: **Phaser**
 
-## Project: **X**
+## Project: **Survival Game**
 
 ---
 
-### X/X/XX:
-* Text
+### 10/1/25:
+* Today, I wacthed this tutorial [video](https://www.youtube.com/watch?v=frRWKxB9Hm0&list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&index=3) about how to set up Phaser (my tool) without any error.
+  * This allows me to code games or cool interative websites in my **IDE**. It had many steps, requiring to download a specific Javascript file with Phaser in it.
+    * After, I had to create a new `html` file to eb able to code html elements in seperate windows.
+  * Lastly, I had to download a web server for "_security reasons_". 
 
 ### X/X/XX:
 * Text
 
 
-<!-- 
+<!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
 * Challenges, a-ha moments, etc
