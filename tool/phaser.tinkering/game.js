@@ -9,4 +9,4 @@ const config = {
     zoom:2,
   },
   physics: {
-    default
+    default: 'matter'
