@@ -5,4 +5,4 @@ var config = {
   // scene: [Scene1, Scene2];
 }
 
-var game = new Phaser.Game(config);
+// var game = new Phaser.Game(config);
