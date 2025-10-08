@@ -1,5 +1,5 @@
-import './style.css'
-import Phaser from 'phaser'
+// import './style.css'
+// import Phaser from 'phaser'
 
 var config = {
     type: Phaser.AUTO,
