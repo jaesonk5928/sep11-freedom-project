@@ -1,8 +1,24 @@
 var config = {
-  width: 800,
-  height: 600,
-  backgroundColor: 0x000000,
-  // scene: [Scene1, Scene2]
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
+    }
+};
+
+var game = new Phaser.Game(config);
+
+function preload ()
+{
 }
 
-// var game = new Phaser.Game(config);
+function create ()
+{
+}
+
+function update ()
+{
+}
