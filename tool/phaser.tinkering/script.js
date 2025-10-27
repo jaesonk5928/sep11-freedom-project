@@ -8,50 +8,41 @@ class Example extends Phaser.Scene
     preload ()
     {
         // this.load.setBaseURL('https://cdn.phaserfiles.com/v385');
-        this.load.atlas('gems', 'assets/tests/columns/gems.png', 'assets/tests/columns/gems.json');
-        // Local variable
-        this.y = 160;
+        this.load.atlas('soldier', 'assets/animations/soldier.png', 'assets/animations/soldier.json');
+        this.load.image('bg', 'assets/pics/town-wreck.jpg');
     }
 
     create ()
     {
-        this.add.text(400, 32, 'Click to create animations', { color: '#00ff00' })
-            .setOrigin(0.5, 0);
+        this.add.image(400, 300, 'bg');
 
-        //  Each time a new animation is added to the Animation Manager we'll call this function
-        this.anims.on(Phaser.Animations.Events.ADD_ANIMATION, this.addAnimation, this);
+        const rambo = this.add.sprite(500, 500, 'soldier');
 
-        this.i = 0;
+        //  The following animation is created directly on the 'rambo' Sprite.
 
-        //  Click to add an animation
-        this.input.on('pointerup', function () {
-            switch (this.i)
-            {
-                case 0:
-                    this.anims.create({ key: 'diamond', frames: this.anims.generateFrameNames('gems', { prefix: 'diamond_', end: 15, zeroPad: 4 }), repeat: -1 });
-                    break;
+        //  It cannot be used by any other sprite, and the key ('walk') is never added to
+        //  the global Animation Manager, as it's kept local to this Sprite.
+        rambo.anims.create({
+            key: 'walk',
+            frames: this.anims.generateFrameNames('soldier', { prefix: 'soldier_3_walk_', start: 1, end: 8 }),
+            frameRate: 12,
+            repeat: -1
+        });
 
-                case 1:
-                    this.anims.create({ key: 'prism', frames: this.anims.generateFrameNames('gems', { prefix: 'prism_', end: 6, zeroPad: 4 }), repeat: -1 });
-                    break;
+        //  Now let's create a new 'walk' animation that is stored in the global Animation Manager:
+        this.anims.create({
+            key: 'walk',
+            frames: this.anims.generateFrameNames('soldier', { prefix: 'Soldier_2_walk_', start: 1, end: 8 }),
+            frameRate: 12,
+            repeat: -1
+        });
 
-                case 2:
-                    this.anims.create({ key: 'ruby', frames: this.anims.generateFrameNames('gems', { prefix: 'ruby_', end: 6, zeroPad: 4 }), repeat: -1 });
-                    break;
+        //  Because the rambo Sprite has its own 'walk' animation, it will play it:
+        rambo.play('walk');
 
-                case 3:
-                    this.anims.create({ key: 'square', frames: this.anims.generateFrameNames('gems', { prefix: 'square_', end: 14, zeroPad: 4 }), repeat: -1 });
-                    break;
-            }
-            this.i++;
-        }, this);
-    }
-
-    addAnimation (key)
-    {
-        this.add.sprite(400, this.y, 'gems')
-            .play(key);
-        this.y += 100;
+        //  However, this Sprite will play the global 'walk' animation, because it doesn't have its own:
+        this.add.sprite(200, 500, 'soldier')
+            .play('walk');
     }
 }
 
@@ -63,5 +54,6 @@ const config = {
     scene: Example
 };
 
-
 const game = new Phaser.Game(config);
+
+
