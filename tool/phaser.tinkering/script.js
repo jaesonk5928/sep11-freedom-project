@@ -8,39 +8,50 @@ class Example extends Phaser.Scene
     preload ()
     {
         // this.load.setBaseURL('https://cdn.phaserfiles.com/v385');
-        this.load.atlas('alien', 'assets/animations/alien.png', 'assets/animations/alien.json');
-        this.load.image('bg', 'assets/pics/space-wreck.jpg');
+        this.load.atlas('gems', 'assets/tests/columns/gems.png', 'assets/tests/columns/gems.json');
+        // Local variable
+        this.y = 160;
     }
 
     create ()
     {
-        this.add.image(400, 300, 'bg');
+        this.add.text(400, 32, 'Click to create animations', { color: '#00ff00' })
+            .setOrigin(0.5, 0);
 
-        const text = this.add.text(400, 32, "Click to toggle sequence", { color: '#00ff00' }).setOrigin(0.5, 0);
+        //  Each time a new animation is added to the Animation Manager we'll call this function
+        this.anims.on(Phaser.Animations.Events.ADD_ANIMATION, this.addAnimation, this);
 
-        //  Our global animations, as defined in the texture atlas
-        this.anims.create({ key: 'idle', frames: this.anims.generateFrameNames('alien', { prefix: '01_Idle_', end: 17, zeroPad: 3 }), repeat: -1, repeatDelay: 500, frameRate: 18 });
-        this.anims.create({ key: 'turn', frames: this.anims.generateFrameNames('alien', { prefix: '02_Turn_to_walk_', end: 3, zeroPad: 3 }), frameRate: 12 });
-        this.anims.create({ key: 'walk', frames: this.anims.generateFrameNames('alien', { prefix: '03_Walk_', end: 12, zeroPad: 3 }), repeat: -1, frameRate: 18 });
+        this.i = 0;
 
-        const ripley = this.add.sprite(400, 300, 'alien').play('idle');
-
-        this.input.on('pointerdown', function () {
-
-            if (ripley.anims.getName() === 'idle')
+        //  Click to add an animation
+        this.input.on('pointerup', function () {
+            switch (this.i)
             {
-                //  When the current animation repeat ends, we'll play the 'turn' animation
-                ripley.anims.playAfterRepeat('turn');
+                case 0:
+                    this.anims.create({ key: 'diamond', frames: this.anims.generateFrameNames('gems', { prefix: 'diamond_', end: 15, zeroPad: 4 }), repeat: -1 });
+                    break;
 
-                //  And after that, the 'walk' look
-                ripley.anims.chain('walk');
-            }
-            else
-            {
-                ripley.anims.play('idle');
-            }
+                case 1:
+                    this.anims.create({ key: 'prism', frames: this.anims.generateFrameNames('gems', { prefix: 'prism_', end: 6, zeroPad: 4 }), repeat: -1 });
+                    break;
 
-        });
+                case 2:
+                    this.anims.create({ key: 'ruby', frames: this.anims.generateFrameNames('gems', { prefix: 'ruby_', end: 6, zeroPad: 4 }), repeat: -1 });
+                    break;
+
+                case 3:
+                    this.anims.create({ key: 'square', frames: this.anims.generateFrameNames('gems', { prefix: 'square_', end: 14, zeroPad: 4 }), repeat: -1 });
+                    break;
+            }
+            this.i++;
+        }, this);
+    }
+
+    addAnimation (key)
+    {
+        this.add.sprite(400, this.y, 'gems')
+            .play(key);
+        this.y += 100;
     }
 }
 
@@ -51,5 +62,6 @@ const config = {
     height: 600,
     scene: Example
 };
+
 
 const game = new Phaser.Game(config);
