@@ -4,6 +4,6 @@ class Scene2 extends Phaser.Scene{
   }
 
   create(){
-    this.add.text(20, 20, "Playing game", {font: "25px Arial", fill: "yellow"});
+    this.add.text(20, 20, "Loading...", {font: "25px Arial", fill: "yellow"});
   }
 }
