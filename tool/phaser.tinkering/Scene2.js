@@ -26,9 +26,9 @@ class Scene2 extends Phaser.Scene {
     });
 
     // this.ship1.setScale(5);
-    // this.ship1.setOrigin(0.5);
-    // this.ship1.flipY = true;
-    // this.ship1.angle = 90;
+    this.ship1.setOrigin(0.5);
+    this.ship1.flipY = true;
+    this.ship1.angle = 90;
 
   }
 }

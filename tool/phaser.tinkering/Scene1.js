@@ -13,10 +13,10 @@ class Scene1 extends Phaser.Scene {
   }
 
   preload(){
-    this.load.image("background", "assets/images/background.png");
-    this.load.image("ship", "assets/images/ship.png");
-    this.load.image("ship2", "assets/images/ship2.png");
-    this.load.image("ship3", "assets/images/ship3.png");
+    this.load.image("background", "images/background.png");
+    this.load.image("ship", "images/ship.png");
+    this.load.image("ship2", "images/ship2.png");
+    this.load.image("ship3", "images/ship3.png");
   }
 
   create() {

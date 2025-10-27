@@ -28,8 +28,8 @@
 // }
 
 var config = {
-  width: 1600,
-  height: 1200,
+  width: 900,
+  height: 800,
   backgroundColor: 0x000000,
   scene: [Scene1, Scene2]
 }
