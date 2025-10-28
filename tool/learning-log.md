@@ -19,8 +19,8 @@
   * I watched Episodes 1 to 5. It goes from basic Phaser setup by making **folders** & **files**
   * After, the videos explain how Phaser **scenes** work by downloading _pngs_.
   * It also describes what sprites are and how it affects the scenes to help run smoothly.
-  * Lastly, my favorite part was when it showed some starter code on how to animate/move 
-
+  * Lastly, my favorite part was when it showed some starter code on how to animate/move the "**objects**" or sprites by using **X** and **Y**
+  axis's 
 
 <!--
 * Links you used today (websites, videos, etc)
