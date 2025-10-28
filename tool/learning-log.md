@@ -15,7 +15,10 @@
 * I will try to make the Phaser work in my IDE and tinker with the tool.
 
 ### 10/27/25:
-* 
+* Today, I watched some videos from this [Youtube playlist](https://www.youtube.com/watch?v=frRWKxB9Hm0&list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&index=1) about Phaser Setup and Basics.
+  * I watched Episodes 1 to 5. It goes from basic Phaser setup by making **folders** & **files**
+  * After, the videos explain how Phaser **scenes** work by downloading _pngs_.
+  * It also 
 
 
 <!--
