@@ -29,7 +29,7 @@ class Scene2 extends Phaser.Scene {
     this.moveShip(this.ship3, 3);
 
     // 4.2 scroll the background
-    this.background.tilePositionY -= 10;
+    // this.background.tilePositionY -= 10;
 
   }
 
