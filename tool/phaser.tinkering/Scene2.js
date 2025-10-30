@@ -3,15 +3,15 @@ class Scene2 extends Phaser.Scene {
     super("playGame");
   }
 
-  create() {
-    // 4.1 make the background a tile sprite
-    //this.background = this.add.image(0, 0, "background");
-    this.background = this.add.tileSprite(0, 0, config.width, config.height, "background");
-    this.background.setOrigin(0, 0);
+  // create() {
+  //   // 4.1 make the background a tile sprite
+  //   //this.background = this.add.image(0, 0, "background");
+  //   this.background = this.add.tileSprite(0, 0, config.width, config.height, "background");
+  //   this.background.setOrigin(0, 0);
 
-    this.ship1 = this.add.image(config.width / 2 - 50, config.height / 2, "ship");
-    this.ship2 = this.add.image(config.width / 2, config.height / 2, "ship2");
-    this.ship3 = this.add.image(config.width / 2 + 50, config.height / 2, "ship3");
+  //   this.ship1 = this.add.image(config.width / 2 - 50, config.height / 2, "ship");
+  //   this.ship2 = this.add.image(config.width / 2, config.height / 2, "ship2");
+  //   this.ship3 = this.add.image(config.width / 2 + 50, config.height / 2, "ship3");
 
     this.add.text(20, 20, "Falling Ships (lol)", {
       font: "25px Arial",
@@ -34,13 +34,13 @@ class Scene2 extends Phaser.Scene {
   }
 
   // 1.2 create the function to move the ships
-  moveShip(ship, speed) {
-    // increase the position of the ship on the vertical axis
-    ship.y -= speed;
-    // if the ship hits the bottom of the screen call the reset function
-    if (ship.y > config.height) {
-      // 2.1 call a reset position function
-      this.resetShipPos(ship);
+  // moveShip(ship, speed) {
+  //   // increase the position of the ship on the vertical axis
+  //   ship.y -= speed;
+  //   // if the ship hits the bottom of the screen call the reset function
+  //   if (ship.y > config.height) {
+  //     // 2.1 call a reset position function
+  //     this.resetShipPos(ship);
     }
   }
 
