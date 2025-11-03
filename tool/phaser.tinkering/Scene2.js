@@ -47,19 +47,19 @@ class Scene2 extends Phaser.Scene {
     this.ship3.play("ship3_anim");
 
     // 1 make the ships clickable to destroy them
-    this.ship1.setInteractive();
-    this.ship2.setInteractive();
-    this.ship3.setInteractive();
+    // this.ship1.setInteractive();
+    // this.ship2.setInteractive();
+    // this.ship3.setInteractive();
 
     // 1.2
-    this.input.on('gameobjectdown', this.destroyShip, this);
+//     this.input.on('gameobjectdown', this.destroyShip, this);
 
-    this.add.text(20, 20, "Playing game", {
-      font: "25px Arial",
-      fill: "yellow"
-    });
+//     this.add.text(20, 20, "Playing game", {
+//       font: "25px Arial",
+//       fill: "yellow"
+//     });
 
-  }
+//   }
 
   update() {
 
@@ -85,10 +85,10 @@ class Scene2 extends Phaser.Scene {
   }
 
   // 1.3
-  destroyShip(pointer, gameObject) {
-    gameObject.setTexture("explosion");
-    gameObject.play("explode");
-  }
+//   destroyShip(pointer, gameObject) {
+//     gameObject.setTexture("explosion");
+//     gameObject.play("explode");
+//   }
 
 
 }
