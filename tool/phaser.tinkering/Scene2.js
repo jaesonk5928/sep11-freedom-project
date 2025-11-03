@@ -13,7 +13,7 @@ class Scene2 extends Phaser.Scene {
     this.ship2 = this.add.image(config.width / 2, config.height / 2, "ship2");
     this.ship3 = this.add.image(config.width / 2 + 50, config.height / 2, "ship3");
 
-    this.add.text(20, 20, "Playing game", {
+    this.add.text(20, 20, "Space Destroyer", {
       font: "25px Arial",
       fill: "yellow"
     });
@@ -29,7 +29,7 @@ class Scene2 extends Phaser.Scene {
     this.moveShip(this.ship3, 3);
 
     // 4.2 scroll the background
-    this.background.tilePositionY -= 0.5;
+    this.background.tilePositionY += 4;
 
   }
 
