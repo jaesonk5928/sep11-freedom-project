@@ -18,6 +18,12 @@ class Scene2 extends Phaser.Scene {
       fill: "yellow"
     });
 
+    this.background.setScale(2);
+    // this.ship1.setOrigin(0.5);
+    this.background.flipX = true;
+    // this.background.angle = 90;
+
+
   }
 
   // 0 add the update function
@@ -29,7 +35,7 @@ class Scene2 extends Phaser.Scene {
     this.moveShip(this.ship3, 3);
 
     // 4.2 scroll the background
-    this.background.tilePositionY -= 0.5;
+    this.background.tilePositionY -= 2;
 
   }
 
@@ -47,7 +53,7 @@ class Scene2 extends Phaser.Scene {
   // 2.2 create the reset position function
   resetShipPos(ship){
     // put the ship on the top
-    ship.y = 0;
+    ship.y = 10;
     // put the ship on a random position on the x axis
     var randomX = Phaser.Math.Between(0, config.width);
     ship.x = randomX;
