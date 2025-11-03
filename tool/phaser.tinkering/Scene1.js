@@ -1,12 +1,3 @@
-// class Scene1 extends Phaser.Scene {
-//   constructor() {
-//     super("bootGame");
-//   }
-//   create() {
-//     this.add.text(20, 20, "Loading game...");
-//     this.scene.start("playGame");
-//   }
-// }
 class Scene1 extends Phaser.Scene {
   constructor() {
     super("bootGame");
@@ -14,9 +5,27 @@ class Scene1 extends Phaser.Scene {
 
   preload(){
     this.load.image("background", "images/background.png");
-    this.load.image("ship", "images/ship.png");
-    this.load.image("ship2", "images/ship2.png");
-    this.load.image("ship3", "images/ship3.png");
+    // 0 chnage the path to spritesheets
+    // this.load.image("ship", "assets/images/ship.png");
+    // this.load.image("ship2", "assets/images/ship2.png");
+    // this.load.image("ship3", "assets/images/ship3.png");
+    // to
+    this.load.spritesheet("ship", "images/ship.png",{
+      frameWidth: 16,
+      frameHeight: 16
+    });
+    this.load.spritesheet("ship2", "images/ship2.png",{
+      frameWidth: 32,
+      frameHeight: 16
+    });
+    this.load.spritesheet("ship3", "images/ship3.png",{
+      frameWidth: 32,
+      frameHeight: 32
+    });
+    this.load.spritesheet("explosion", "images/explosion.png",{
+      frameWidth: 16,
+      frameHeight: 16
+    });
   }
 
   create() {
