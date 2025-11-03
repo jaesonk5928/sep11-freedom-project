@@ -10,7 +10,7 @@ class Scene1 extends Phaser.Scene {
     // this.load.image("ship2", "assets/images/ship2.png");
     // this.load.image("ship3", "assets/images/ship3.png");
     // to
-    this.load.spritesheet("ship", "spritesheets/ship.png",{
+    this.load.spritesheet("ship1", "spritesheets/ship1.png",{
       frameWidth: 16,
       frameHeight: 16
     });
@@ -22,7 +22,7 @@ class Scene1 extends Phaser.Scene {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet("explosion", "assets/spritesheets/explosion.png",{
+    this.load.spritesheet("explosion", "spritesheets/explosion.png",{
       frameWidth: 16,
       frameHeight: 16
     });
