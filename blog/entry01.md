@@ -1,7 +1,8 @@
 # Entry 1
 ##### X/X/XX
 
-Text
+### Content
+
 
 [Next](entry02.md)
 
