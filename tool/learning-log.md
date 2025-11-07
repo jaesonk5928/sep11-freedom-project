@@ -16,15 +16,20 @@
 
 ### 10/27/25:
 * Today, I watched some videos from this [Youtube playlist](https://www.youtube.com/watch?v=frRWKxB9Hm0&list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&index=1) about Phaser Setup and Basics.
-  * I watched Episodes 1 to 5. It goes from basic Phaser setup by making **folders** & **files**
+  * I watched Episodes 1 to 3. It goes from basic Phaser setup by making **folders** & **files**
   * After, the videos explain how Phaser **scenes** work by downloading _pngs_.
   * It also describes what sprites are and how it affects the scenes to help run smoothly.
-  * Lastly, my favorite part was when it showed some starter code on how to animate/move the "**objects**" or sprites by using **X** and **Y**
-  axes. It is very important in terms of games.
+  * Lastly, my favorite part was when it showed some starter code on how to download the "**objects**" or sprites by using **Save as..** and dragging the **.png** images. It is very important in terms of game visuals.
 * Some challenges that I faced during watching the video and following the lessons/code were:
   * The ability to locate images that load into the game, due to not me linking the pathway to let it load.
   * Accidentally added an additional Phaser download link in my **html** server, allowing Phaser to not function.
-* My next steps are to add movement keys to characters/image background, and add some sound to the Phaser tinker game. It will be more fun then today! 
+* My next steps are to add animations to characters/image background, and add some sound to the Phaser tinker game. It will be more fun then today!
+
+### 11/7/25:
+* Today, I watched the same video from last week, but this time, it's Episodes #4 to #6.
+  * The 4th video basically talks about how to move images
+
+
 
 <!--
 * Links you used today (websites, videos, etc)
