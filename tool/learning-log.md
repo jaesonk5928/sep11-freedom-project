@@ -27,7 +27,11 @@
 
 ### 11/7/25:
 * Today, I watched the same video from last week, but this time, it's Episodes #4 to #6.
-  * The 4th video basically talks about how to move images
+  * The 4th video basically talks about how to move images by using both the **X** and **Y** variables to run it's animations smoothly.
+    * I tinkered with the speed of falling ships. I changed the speed from _3_ to _5_. This caused the ships to fall faster. Same with trying to make the ships fall slower.
+  * The 5th video talked about spritesheets, I don't really understand what these are, but the video explains it. Spritesheets are kinda like **moving** "_pixels_". I think we will learn this type later...
+  * The 6th video is about game **_physics_**. It shows me how it works, similarly to real life gravity. It explains why physics are important for games. In the video example, the person uses images, then animates them with `this.physics.add()`. I copied the example to tinker with it  with it, and adjusted the velocity of the images to bounce faster.
+* Next steps are to find other resources to help me make an actual game with using movement keys (**w, a, s, d**). 
 
 
 
