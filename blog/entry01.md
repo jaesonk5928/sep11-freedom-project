@@ -17,8 +17,7 @@ Some skills that I've improved on are **Collaboration** and **Communication**.
 For this blog entry, I collaborated very often with **classmates** & **teachers** to help/to get help. For example, my partner **David** needed help downloading his tool in his IDE, so he asked me to help and I gladly helped David. I showed him where to find the resources and etc.
 
 #### Communcation
-Really, it's the same reason why the 
-
+I've improved my communicating skills during typing this blog. I called my old friend that I haven't seen since 1st grade. He remembered me, even after 10+ years. I communicated with him, scared to talk, as his voice changed. It was very scary, but I managed to talk with him anyways.
 
 [Next](entry02.md)
 
