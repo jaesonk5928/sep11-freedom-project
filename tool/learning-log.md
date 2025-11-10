@@ -25,7 +25,7 @@
   * Accidentally added an additional Phaser download link in my **html** server, allowing Phaser to not function.
 * My next steps are to add animations to characters/image background, and add some sound to the Phaser tinker game. It will be more fun then today!
 
-### 11/7/25:
+### 11/10/25:
 * Today, I watched the same video from last week, but this time, it's Episodes #4 to #6.
   * The 4th video basically talks about how to move images by using both the **X** and **Y** variables to run it's animations smoothly.
     * I tinkered with the speed of falling ships. I changed the speed from _3_ to _5_. This caused the ships to fall faster. Same with trying to make the ships fall slower.
