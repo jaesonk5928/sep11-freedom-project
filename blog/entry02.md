@@ -38,7 +38,13 @@ moveShip(ship, speed) {
     ship.x = randomX;
 }
 ```
-Here's a code snippet about 
+Here's a code snippet about loading in spritesheets using **Phaser**:
+```js
+this.load.spritesheet("ship", "assets/spritesheets/ship.png",{
+  frameWidth: 16,
+  frameHeight: 16
+});
+```
 
 
 
