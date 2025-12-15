@@ -22,6 +22,21 @@ this.anims.create({
 this.ship1.play("ship1_anim");
 this.ship2.play("ship2_anim");
 this.ship3.play("ship3_anim");
+
+// Adjustable speed of the ships
+moveShip(ship, speed) {
+    ship.y += speed;
+    if (ship.y > config.height) {
+      this.resetShipPos(ship);
+    }
+  }
+
+// uses X & Y coordinates to reset the ship's movement infintly
+  resetShipPos(ship){
+    ship.y = 0;
+    var randomX = Phaser.Math.Between(0, config.width);
+    ship.x = randomX;
+}
 ```
 Here's a code snippet about 
 
