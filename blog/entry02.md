@@ -23,7 +23,7 @@ this.ship1.play("ship1_anim");
 this.ship2.play("ship2_anim");
 this.ship3.play("ship3_anim");
 ```
-Another way I've been learning 
+Here's a code snippet about 
 
 
 
