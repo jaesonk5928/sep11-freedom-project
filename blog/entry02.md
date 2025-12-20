@@ -45,7 +45,22 @@ this.load.spritesheet("ship", "assets/spritesheets/ship.png",{
   frameHeight: 16
 });
 ```
+I also wanted to show this code snippet about using `this.input.on('gameobjectdown', this.destroyShip, this)` as a way to make the ships interactive. When you click on the ship with a mouse (or touchpad), it "explodes" using an explosion as a "**spritesheet**". Example:
+```js
+ this.input.on('gameobjectdown', this.destroyShip, this);
 
+    this.add.text(20, 20, "Click the ships", {
+      font: "25px Arial",
+      fill: "yellow"
+    });
+
+  }
+
+    destroyShip(pointer, gameObject) {
+    gameObject.setTexture("explosion");
+    gameObject.play("explode");
+  }
+```
 
 
 
