@@ -65,9 +65,9 @@
   * Part 9 is basically teaching me how to use **"collisions"** with **Phaser**. It consists of using the `().overlap` to  check if 2 objects are "touching" or **colliding**. Also `().hurtPlayer` is a function where if an object touches the "player", they lose. Here was the summary.
   * Part 10 is continuing what Part 9 did but just adding a score counter for the "trial" game that the video makes.
 
-* Next Steps: Finish parts 11 - 12 next week. 
+* Next Steps: Finish parts 11 - 12 next week.
 
-
+### 1/15/26
 
 
 
