@@ -75,10 +75,11 @@
   * Part 10 = Adding a "score" counter to determine the number of times the "ship" destroys an object.
 
 * Lastly, I'm watching part 11 & 12 of the Phaser playlist and will tell you what both videos were about:
-  * Part 11 is basically teaching me how to use **"collisions"** with **Phaser**. It consists of using the `().overlap` to  check if 2 objects are "touching" or **colliding**. Also `().hurtPlayer` is a function where if an object touches the "player", they lose. Here was the summary.
-  * Part 10 is continuing what Part 9 did but just adding a score counter for the "trial" game that the video makes.
+  * Part 11 is basically a **recap** of what the whole series is about. But this time, he explains the problems with his code and showed what solutions he came up with. He also displayed his takeaways about this project tutorial.
 
-* Next Steps: Finish parts 11 - 12 next week.
+  * Part 12 is about how to add sound/audio in the background of the game. He perfers to use **.OGG** files instead of **.MP3**. You also have to name your ID path.
+
+* Next Steps: Add sound to my "tinker" project next week.
 
 
 
