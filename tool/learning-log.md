@@ -68,10 +68,12 @@
 * Next Steps: Finish parts 11 - 12 next week.
 
 ### 1/15/26
-* Today is the last part of watching this [Phaser Playlist](https://www.youtube.com/watch?v=frRWKxB9Hm0&list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&index=1). Here's a summary of what I learned LAST week:
-* Part 9 of the **Phaser Playlist** was about:
-  * Part 9 = How to code/assign specfic keys to **movements**.
-  * Part 8 = creating specific **classes** is important for games. It helps Javascript interpret "**properties**" seperately from images and sprites.
+* Today is the last part of watching this [Phaser Playlist](https://www.youtube.com/watch?v=frRWKxB9Hm0&list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&index=1). Here's a recap of what I learned LAST time as of (**12/14/25**):
+* Part 9 - 10 of the **Phaser Playlist** was about:
+  * Part 9 = The main highlight of this video is about **Collisions**. It explains how to code so the objects in the game can _collide_ with each other, cauing Phaser to calculate when a game object collides. <br>
+
+  * Part 10 = Adding a "score" counter to determine the number of times the "ship" 
+
 * Currently, Im watching part 9 & 10 of the Phaser playlist and will tell you what both videos were about:
   * Part 9 is basically teaching me how to use **"collisions"** with **Phaser**. It consists of using the `().overlap` to  check if 2 objects are "touching" or **colliding**. Also `().hurtPlayer` is a function where if an object touches the "player", they lose. Here was the summary.
   * Part 10 is continuing what Part 9 did but just adding a score counter for the "trial" game that the video makes.
