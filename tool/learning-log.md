@@ -82,21 +82,6 @@
 * Next Steps: Add sound to my "tinker" project next week.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
