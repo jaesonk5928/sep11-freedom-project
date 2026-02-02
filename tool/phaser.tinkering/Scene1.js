@@ -26,6 +26,11 @@ this.load.spritesheet("explosion", "assets/spritesheets/explosion.png",{
   frameWidth: 16,
   frameHeight: 16
 });
+// this.load.spritesheet("power-up", "assets/spritesheets/power-up.png",{
+//   frameWidth: 16,
+//   frameHeight: 16
+// });
+
 }
   create() {
     this.add.text(20, 20, "Loading game...");
