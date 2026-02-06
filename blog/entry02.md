@@ -80,7 +80,7 @@ Some skills that I have worked on are **How to Google** and **How to Read**.
 The main reason I improved on this skill is because I searched up resources that helped me understand and helped contribute to the structure of this current blog. For example, the article that I listed above was a game changer for my learning development of Phaser.
 
 #### How to Read
-I've improved my reading skills while reading the article (mentioned above). I first looked **when** and **who** created the article. This is execeptionally important for looking for realiable sources that have a creditable _publisher_ and requires to be _relevant_. 
+I've improved my reading skills while reading the article (mentioned above). I first looked **when** and **who** created the article. This is execeptionally important for looking for realiable sources that have a creditable _publisher_ and requires to be _relevant_.
 <br>
 
 [Previous](entry01.md) | [Next](entry03.md)
