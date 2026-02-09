@@ -1,6 +1,6 @@
 # Plan
 
-## Tool: 
+## Tool: Phaser
 ## Product: 
 
 ---
@@ -49,7 +49,7 @@
 
 <!-- DO NOT USE THIS YET
 
-#### Peer Feedback 
+#### Peer Feedback
 
 | Name | Glows | Grows |
 | -------- | ------- | ------- |
