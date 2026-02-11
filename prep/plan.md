@@ -1,19 +1,17 @@
 # Plan
 
 ## Tool: Phaser
-## Product: 
-
----
+## Product: Horror/Adventure Game
 
 ## Timeline
 
 #### MVP
-
-- [ ] Task (deadline: X)
-  - [ ] Subtask (deadline: X)
+- [ ] Beginning Functions
+  - [ ] Add a "permanent" background in the webpage (3/16)
+  - [ ] Add a sprite (as a movable character) to load in the webpage (3/23)
+  - [ ] Implement the keys for the character. 
 
 #### Beyond MVP
-
 - [ ] Task
   - [ ] Subtask
 
