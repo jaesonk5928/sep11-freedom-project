@@ -9,7 +9,9 @@
 - [ ] Beginning Functions
   - [ ] Add a "permanent" background in the webpage (3/16)
   - [ ] Add a sprite (as a movable character) to load in the webpage (3/23)
-  - [ ] Implement the keys for the character. 
+  - [ ] Implement the "movement" keys for the character.
+  - [ ] Add a "bot" to follow the "player" to kill them
+  - [ ] Add a "sprint" feature. 
 
 #### Beyond MVP
 - [ ] Task
