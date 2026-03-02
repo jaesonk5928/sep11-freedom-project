@@ -1,0 +1,18 @@
+class Scene1 extends Phaser.Scene {
+  constructor() {
+    super("bootGame");
+  }
+
+
+preload(){
+    this.load.image("background", "assets/images/darkBg.png");
+    this.load.image("player", "assets/images/drag.png");
+  }
+
+  create() {
+    this.add.text(20, 20, "Loading game...");
+    this.scene.start("playGame");
+    this.add.image(400, 300, 'background');
+  }
+}
+
