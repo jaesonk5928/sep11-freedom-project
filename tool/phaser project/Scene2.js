@@ -5,7 +5,7 @@ class Scene2 extends Phaser.Scene{
 
   create(){
     this.add.text(20, 20, "Game", {font: "25px Arial", fill: "yellow"});
-    this.add.image(200, 500, "background");
+    this.add.image(900, 500, "background");
 
     this.player1 = this.add.image(config.width / 35 - 50, config.height / 7.5, "player");
   }
