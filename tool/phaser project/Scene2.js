@@ -4,11 +4,13 @@ class Scene2 extends Phaser.Scene{
 }
 
   create(){
-    this.add.text(20, 20, "Game", {font: "25px Arial", fill: "yellow"});
-    this.add.image(300, 350, "background");
+    // this.add.text(20, 20, "Game", {font: "25px Arial", fill: "yellow"});
+    this.add.image(400, 350, "background");
     // this.player1 = this.add.image(config.width / 5 - 50, config.height / 7.5, "player");
   }
 }
+
+//  this.background.tilePositionY -= 0.5;
 
 
 
