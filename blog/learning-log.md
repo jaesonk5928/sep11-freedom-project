@@ -81,6 +81,35 @@
 
 * Next Steps: Add sound to my "tinker" project next week.
 
+### 3/8/26
+* The videos I've been watching about Phaser **inspired** me to make my own game. I had to plan in my `plan.md`. My **MVP** goals are:
+  - [ ] Add a "permanent" background in the webpage (Due 3/16)
+  - [ ] Download a sprite (a movable character) to load in the webpage (Due 3/20)
+  - [ ] Implement the "movement" keys for the character (Due 3/26)
+  - [ ] Add a "bot" to follow the "player" to kill them (Due 3/30)
+  - [ ] Add a "sprint" feature with a specific keybind for the player (Due 4/3)
+  - [ ] Put a "score" counter for the game
+  - [ ] Make a finish "screen" saying **"You Win!"**
+
+* Currently, I'm working on parts 1 - 2 of the Phaser Game and will show you my code snippets:
+```js
+preload(){
+    this.load.image("background", "assets/images/darkBg.png");
+    this.load.image("player", "assets/images/player.png");
+}
+
+// This actually loads in my background/player
+  create(){
+    this.add.image(400, 350, "background");
+    this.add.image(400, 350, "player1");
+}
+```
+This `preload()` function helps me preload my **background** and **player sprite** using Phaser, while `create()` helps the background load in in my webpage.
+
+Overall, all I have been doing this week was to implement my skills that I learned during watching these **Phaser** tutorial videos. I now used them to create a game. 
+
+* Next Steps: Finish parts 3 - 4 for next week tasks.
+
 
 <!--
 * Links you used today (websites, videos, etc)
