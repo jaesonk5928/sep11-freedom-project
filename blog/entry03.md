@@ -44,6 +44,9 @@ Some **code snippets**:
 ```
 This code uses javascript into background for the tic-tac-toe game that uses **frames** and `repeat` to register for the game's mechanic of clicking into the background to play. This was one of my goals during the winter break.
 
+#### Next Goals
+After completing the game "**configuration**" for the tic tac toe game, my next goal is to use the assets from the video and put it in a **folder**. While my sprites load, I could use searched up `O`'s and `X`'s images as a game "piece". That is my goal that I'm currently doing.  
+
 ### EDP (Engineering Design Process)
 After my second (2nd) **blog entry**, I said that I was on Step 2 of the EDP: "**Researching the Problem**". Currently im at the 3rd step of the _Engineering Design Process_: "**Brainstorm Possible Solution(s)**". I came up with some solutions that could possibly help with social **safety**. The problem with texting people you know little could pose a dangerous harm to your "account". I would change it so that you have to do a "**double check**" thing to people you don't trust.
 
