@@ -52,11 +52,10 @@ Now that I am writing my 4th **blog entry**, I am currently on Step 4 of the EDP
 I have been working on skills such as **Growth Mindset** & **How to Learn**.
 
 #### Growth Mindset
-I improved on the skill of **Growth Mindset** by showing patience. For example, when waiting for my friend to text, I had the urge to check every 
+I improved on the skill of **Growth Mindset** by showing patience. For example, when waiting for my friend to text, I had the urge to check every few minutes, but I decided to do homework during the meantime.
 
 #### How to Learn
-I've improved my skill of **Consideration** by making better choices for the greater good/outcome. For example, I was laying down on the couch when the **snowstorm** hit a few weeks ago. I considered sleeping during the storm, but realized I needed to go out to buy groceries for cooking. I had to consider shoveling the snow rather then sleeping.
-
+I improved on the skill of **How to Learn**. These past weeks, I learned how to properly grade tests and assignments. The teacher helped me understand the topic and how to subtract points. This helped me learn how to grade consistently.
 
 [Previous](entry03.md) | [Next](entry05.md)
 
