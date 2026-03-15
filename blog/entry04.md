@@ -49,7 +49,7 @@ Now that I am writing my 4th **blog entry**, I am currently on Step 4 of the EDP
 * Report button for any private chats.
 
 ### Skills
-I have been working on skills such as **Consideration** and **Consideration**.
+I have been working on skills such as **Growth mindset** & **How to learn**.
 
 #### Time Management
 The main reason I improved on **Time Management** is prioritizng family instead of doing other things like doing homework/sleeping. I followed my siblings and helped them with their chores first, **then** do homework.
