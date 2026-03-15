@@ -44,8 +44,8 @@ These code snippets are from my Freedom Project and this is what I am currently 
 
 ### EDP (Engineering Design Process)
 Now that I am writing my 4th **blog entry**, I am currently on Step 4 of the EDP: "**Plan the most promising solution**". During **Blog 3** & **Step 3**, I came up with some solutions that could possibly help with social **safety**. The problem with texting people you know little could pose a dangerous harm to your "account". Some solutions that I came up with are:
-* Change it so that you have to do a "**double check**" thing to people you don't trust.
-* 
+* Change it so that you have to do a "**double check**" feature to people you don't trust.
+* Delete "friends" that act 
 
 
 [Previous](entry03.md) | [Next](entry05.md)
