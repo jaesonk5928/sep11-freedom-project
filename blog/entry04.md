@@ -11,9 +11,9 @@ To give a definition, images are just for "aesthetics", while spritesheets are a
 We've completed these video tasks so far (almost 1/3 of the way done from learning):
 ```md
 Project Task List
-- ~~ [ ] download & setup project template ~~
-- ~~ [ ] update game configuration ~~
-- ~~ [ ] load in assets ~~
+~~ - [ ] download & setup project template ~~
+~~ - [ ] update game configuration ~~
+~~ - [ ] load in assets ~~
 - [ ] draw game board
 - [ ] draw game pieces
 - [ ] interact with game pieces and toggle frames
@@ -39,7 +39,12 @@ create(){
     bigBg.setScale(2.15);
 }
 ```
-This uses the `create()` function to 
+This uses the `create()` function to actually show the "loaded" images in my scene.
+These code snippets are from my Freedom Project and this is what I am currently doing.
+
+### EDP (Engineering Design Process)
+Now that I am writing my 4th **blog entry**, I am currently on Step 2 of the EDP: "**Researching the Problem**". Currently im at the 3rd step of the _Engineering Design Process_: "**Brainstorm Possible Solution(s)**". I came up with some solutions that could possibly help with social **safety**. The problem with texting people you know little could pose a dangerous harm to your "account". I would change it so that you have to do a "**double check**" thing to people you don't trust.
+
 
 [Previous](entry03.md) | [Next](entry05.md)
 
