@@ -49,12 +49,12 @@ Now that I am writing my 4th **blog entry**, I am currently on Step 4 of the EDP
 * Report button for any private chats.
 
 ### Skills
-I have been working on skills such as **Growth mindset** & **How to learn**.
+I have been working on skills such as **Growth Mindset** & **How to Learn**.
 
-#### Time Management
-The main reason I improved on **Time Management** is prioritizng family instead of doing other things like doing homework/sleeping. I followed my siblings and helped them with their chores first, **then** do homework.
+#### Growth Mindset
+I improved on the skill of **Growth Mindset** by showing patience. For example, when waiting for 
 
-#### Consideration
+#### How to Learn
 I've improved my skill of **Consideration** by making better choices for the greater good/outcome. For example, I was laying down on the couch when the **snowstorm** hit a few weeks ago. I considered sleeping during the storm, but realized I needed to go out to buy groceries for cooking. I had to consider shoveling the snow rather then sleeping.
 
 
