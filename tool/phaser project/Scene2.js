@@ -4,7 +4,6 @@ class Scene2 extends Phaser.Scene{
 }
 
   create(){
-    // this.add.text(20, 20, "Game", {font: "25px Arial", fill: "yellow"});
     const bigBg = this.add.image(400, 350, "background");
     const player = this.add.image(400, 350, "player");
     player.setScale(0.04)

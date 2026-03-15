@@ -6,15 +6,14 @@ When writing **Blog 3**, I've been watching this [video](https://www.youtube.com
 * 6:20 - 10:25
   * The guy in the video teaches us how to upload the **game assests** and load it in our code using `this.add.image()` for loading images, while `this.load.spritesheet()` is similar, but it's for spritesheets.
 
-To give a definition, images are just for "aesthetics"
+To give a definition, images are just for "aesthetics", while spritesheets are about moving images for player funtions.
 
-We've completed these video tasks so far:
-
+We've completed these video tasks so far (almost 1/3 of the way done from learning):
 ```md
 Project Task List
-- [ ] download & setup project template
-- [ ] update game config
-- [ ] load in assets
+- ~~ [ ] download & setup project template ~~
+- ~~ [ ] update game configuration ~~
+- ~~ [ ] load in assets ~~
 - [ ] draw game board
 - [ ] draw game pieces
 - [ ] interact with game pieces and toggle frames
@@ -23,11 +22,24 @@ Project Task List
 - [ ] add getters to tic tac toe class
 - [ ] connect tic tac toe class to phaser scene
 ```
+
 Some **code snippets** about loading in both images & spritesheets:
 ```js
-
-
+preload(){
+    this.load.image("background", "assets/images/darkBg.png");
+    this.load.image("player", "assets/images/stickman.png");
+}
 ```
+This uses the `preload()` function to "load" in the images in my webpage.
+```js
+create(){
+    const bigBg = this.add.image(400, 350, "background");
+    const player = this.add.image(400, 350, "player");
+    player.setScale(0.04)
+    bigBg.setScale(2.15);
+}
+```
+This uses the `create()` function to 
 
 [Previous](entry03.md) | [Next](entry05.md)
 
