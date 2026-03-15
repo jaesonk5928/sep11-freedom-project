@@ -2,11 +2,9 @@
 ##### 3/13/26
 
 ### Content
-When writing **Blog 3**, I've been watching this [video](https://www.youtube.com/watch?v=C3a9hArGa_E). Right after writing **Blog 3**, I watched more of the video from this **this** specific time frame -> _**0:00**_ - _**6:15**_. I can summarize each section of the video:
-* 0:00 - 3:00
-  * It talks about the breakdown of each task on how to set up Phaser, along with a **template**
-* 3:01 - 6:15
-  * After, the guy in the video talks about how to do game configuration and add **assets**.
+When writing **Blog 3**, I've been watching this [video](https://www.youtube.com/watch?v=C3a9hArGa_E). Right after writing **Blog 3**, I watched more of the video from **these** specific _minutes_ time frame -> _**6:20**_ - _**10:25**_. The summary of this part of the video:
+* 6:20 - 10:25
+  * The guy in the video teaches us how to upload the **game assests** and load it in our code using 
 
 To show the video task breakdown:
 ```html
