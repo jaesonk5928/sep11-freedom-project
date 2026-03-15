@@ -44,9 +44,18 @@ These code snippets are from my Freedom Project and this is what I am currently 
 
 ### EDP (Engineering Design Process)
 Now that I am writing my 4th **blog entry**, I am currently on Step 4 of the EDP: "**Plan the most promising solution**". During **Blog 3** & **Step 3**, I came up with some solutions that could possibly help with social **safety**. The problem with texting people you know little could pose a dangerous harm to your "account". Some solutions that I came up with are:
-* Change it so that you have to do a "**double check**" feature to people you don't trust.
+* Change it so that you have to do a "**double verification**" feature to people you don't trust.
 * Minimize the amount of data being shared with a button.
-* 
+* Report button for any private chats.
+
+### Skills
+Some skills that I haven't worked on are **Time Management** and **Consideration**.
+
+#### Time Management
+The main reason I improved on **Time Management** is prioritizng family instead of doing other things like doing homework/sleeping. I followed my siblings and helped them with their chores first, **then** do homework.
+
+#### Consideration
+I've improved my skill of **Consideration** by making better choices for the greater good/outcome. For example, I was laying down on the couch when the **snowstorm** hit a few weeks ago. I considered sleeping during the storm, but realized I needed to go out to buy groceries for cooking. I had to consider shoveling the snow rather then sleeping.
 
 
 [Previous](entry03.md) | [Next](entry05.md)
