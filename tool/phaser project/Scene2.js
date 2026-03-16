@@ -4,10 +4,10 @@ class Scene2 extends Phaser.Scene{
 }
 
   create(){
-    const bigBg = this.add.image(400, 350, "background");
+    const sky = this.add.image(400, 350, "background");
     const player = this.add.image(400, 350, "player");
     player.setScale(0.04)
-    bigBg.setScale(2.15);
+    // bigBg.setScale(2.15);
   }
 }
 
