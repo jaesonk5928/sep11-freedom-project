@@ -106,10 +106,38 @@ preload(){
 ```
 This `preload()` function helps me preload my **background** and **player sprite** using Phaser, while `create()` helps the background load in in my webpage.
 
-Overall, all I have been doing this week was to implement my skills that I learned during watching these **Phaser** tutorial videos. I now used them to create a game. 
+Overall, all I have been doing this week was to implement my skills that I learned during watching these **Phaser** tutorial videos. I now used them to create a game.
 
 * Next Steps: Finish parts 3 - 4 for next week tasks.
 
+### 3/22/26
+If you weren't aware of what I've been doing last week, Here was the tasks I was supposed to do:
+- ~~[ ] Add a "permanent" background in the webpage (Due 3/16)~~
+- ~~[ ] Download a sprite (a movable character) to load in the webpage (Due 3/20)~~
+- [ ] Implement the "movement" keys for the character (Due 3/26)
+- [ ] Add a "bot" to follow the "player" to kill them (Due 3/30)
+- [ ] Add a "sprint" feature with a specific keybind for the player (Due 4/3)
+- [ ] Put a "score" counter for the game
+- [ ] Make a finish "screen" saying **"You Win!"**
+
+So far, I finished both "adding background" and "add a sprite" tasks.
+Now I have to add (or rather "assign") movement keys to each "moving" sprite to work.
+
+Here is the code for the sprites:
+```js
+this.load.spritesheet("player", "assets/images/stickman.png"{
+      frameWidth: 16,
+      frameHeight: 16
+});
+```
+This loads in the player with a frame width/height of 16.
+To add movement keys (more advanced):
+```js
+  this.player.setInteractive();
+```
+Makes the player be "interactive" with keys.
+
+Next goal: Set a bot that follows character movement
 
 <!--
 * Links you used today (websites, videos, etc)
