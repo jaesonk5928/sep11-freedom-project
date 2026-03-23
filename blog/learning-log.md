@@ -139,6 +139,11 @@ Makes the player be "interactive" with keys.
 
 Next goal: Set a bot that follows character movement
 
+
+
+
+
+
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
