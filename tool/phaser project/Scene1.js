@@ -5,15 +5,14 @@ class Scene1 extends Phaser.Scene {
 
 
 preload(){
-    this.load.image("background", "assets/images/darkBg.png");
-    this.load.spritesheet("player", "assets/images/knight.png",{
+    // this.load.image("background", "assets/images/darkBg.png");
+    this.load.spritesheet("player", "assets/spritesheets/knight.png",{
       frameWidth: 16,
       frameHeight: 16
     });
   }
 
   create() {
-    this.player = this.add.sprite(config.width / 2 - 50, config.height / 2, "player");
     this.add.text(20, 20, "Loading game...");
     this.scene.start("playGame");
     this.add.image(400, 300, 'background');
