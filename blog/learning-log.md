@@ -139,7 +139,9 @@ Makes the player be "interactive" with keys.
 
 Next goal: Set a bot that follows character movement
 
-
+### 3/23/26
+My goal right now: make the character walk (sprite)
+Problem: watching videos to set up the sprite -> time consuming 
 
 
 

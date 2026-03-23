@@ -6,7 +6,7 @@ class Scene2 extends Phaser.Scene{
   create(){
     const sky = this.add.image(400, 350, "background");
     const player = this.add.image(400, 350, "player");
-    player.setScale(0.04)
+    // player.setScale()
     // bigBg.setScale(2.15);
   }
 }
