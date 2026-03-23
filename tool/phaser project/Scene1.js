@@ -13,6 +13,7 @@ preload(){
   }
 
   create() {
+    this.player = this.add.sprite(config.width / 2 - 50, config.height / 2, "player");
     this.add.text(20, 20, "Loading game...");
     this.scene.start("playGame");
     this.add.image(400, 300, 'background');
