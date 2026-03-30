@@ -4,10 +4,10 @@ class Scene2 extends Phaser.Scene{
 }
 
   create(){
-    const sky = this.add.image(400, 350, "background");
+    // const sky = this.add.image(400, 350, "background");
     const stickman = this.add.sprite(config.width / 2 - 50, config.height / 2, "player");
 
-    stickman.setScale(4);
+    stickman.setScale(2);
     // bigBg.setScale(2.15);
   }
 }
