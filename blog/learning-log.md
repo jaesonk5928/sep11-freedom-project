@@ -140,11 +140,22 @@ Makes the player be "interactive" with keys.
 Next goal: Set a bot that follows character movement
 
 ### 3/23/26
-My goal right now: make the character walk (sprite)
-Problem: watching videos to set up the sprite -> time consuming 
+Last week, I set myself another goal about my game. The goal was to try to make a bot that moves around randomly. This was one of the sections that made me struggle. I haven't figured out how to make it yet. But I do know how to make a character load in, wiether it is a sprite or an image. Here is proof:
+```js
+preload(){
+    this.load.image("background", "assets/images/darkBg.png");
+    this.load.spritesheet("player", "assets/spritesheets/stick.png",{
+      frameWidth: 16,
+      frameHeight: 16
+    });
+}
+```
+Current problem is trying to load in another bot/character in my game. That is why I've spent my week watching videos on how to make one. Here is one of them: [Video 1](https://www.youtube.com/watch?v=XiDsumRXszc). Here is a summary of it:
 
+* It is a tutorial showing how to add a **CPU** to a Phaser 3 game using Phaser Editor. It walks through setting up a sprite with "Arcade Physics", enabling left/right movement, and handling keyboard input.
 
-
+Another video is: [Video 2](https://www.youtube.com/watch?v=fv4KhkjMr34). Another summary:
+The creator tests three JavaScript game frameworks by building the same small game in each one. He evaluates them based on ease of use, documentation, workflow, performance, etc.
 
 <!--
 * Links you used today (websites, videos, etc)
