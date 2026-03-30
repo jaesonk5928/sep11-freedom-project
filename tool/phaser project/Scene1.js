@@ -14,6 +14,7 @@ class Scene1 extends Phaser.Scene {
     this.add.image(100, 200, 'powerUp');
     this.add.image(800, 300, 'error');
 
+    
 
   }
 }
