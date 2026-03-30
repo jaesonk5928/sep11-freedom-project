@@ -10,11 +10,11 @@ class Scene1 extends Phaser.Scene {
   }
 
   create() {
-    this.add.image(600, 300, 'background');
+    const back = this.add.image(400, 300, 'background');
     this.add.image(100, 200, 'powerUp');
     this.add.image(800, 300, 'error');
 
-    
+    back.scale = 5;
 
   }
 }
