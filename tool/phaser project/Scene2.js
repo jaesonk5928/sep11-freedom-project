@@ -7,7 +7,7 @@ class Scene2 extends Phaser.Scene{
     const sky = this.add.image(400, 350, "background");
     const stickman = this.add.sprite(config.width / 2 - 50, config.height / 2, "player");
 
-    // player.setScale()
+    stickman.setScale(4);
     // bigBg.setScale(2.15);
   }
 }
