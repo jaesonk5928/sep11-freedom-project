@@ -11,17 +11,16 @@
   - [ ] Download a sprite (a movable character) to load in the webpage (Due 3/20)
 - [ ] Middle **Game** Functions
   - [ ] Implement the "movement" keys for the character (Due 3/26)
-  - [ ] Add a "bot" to follow the "player" to kill them (Due 3/30)
-  - [ ] Add a "sprint" feature with a specific keybind for the player (Due 4/3)
-- [ ] End **Game** Functions
-  - [ ] Put a "score" counter for the game
-  - [ ] Make a finish "screen" saying **"You Win!"**
 
 #### Beyond MVP
 - [ ] Extra Features
   - [ ] Download sprites that act like powerups to help the user beat the game faster
   - [ ] Make the bot moove faster based on "difficulty" selection
-  - [ ] Add a death screen "everytime" you die.\
+  - [ ] Add a death screen "everytime" you die.
+  - [ ] Add a "bot" to follow the "player" to kill them (Due 3/30)
+  - [ ] Add a "sprint" feature with a specific keybind for the player (Due 4/3)
+  - [ ] Put a "score" counter for the game
+  - [ ] Make a finish "screen" saying **"You Win!"**
 
 <!-- EXAMPLE
 
