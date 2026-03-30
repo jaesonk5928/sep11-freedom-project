@@ -4,7 +4,7 @@ class Scene2 extends Phaser.Scene{
 }
 
   create(){
-    
+    this.add.image(400, 350, "background");
   }
 }
 
