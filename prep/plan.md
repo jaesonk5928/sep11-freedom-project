@@ -7,10 +7,9 @@
 
 #### MVP
 - [ ] Beginning **Game** Functions
-  - [ ] Add a "permanent" background in the webpage (Due 3/16)
-  - [ ] Download a sprite (a movable character) to load in the webpage (Due 3/20)
-- [ ] Middle **Game** Functions
-  - [ ] Implement the "movement" keys for the character (Due 3/26)
+  - [ ] Add a "permanent" background in the webpage (Due 3/26)
+  - [ ] Download a sprite (a movable character) to load in the webpage (Due 3/30)
+  - [ ] Implement the "movement" keys for the character (Due 4/6)
 
 #### Beyond MVP
 - [ ] Extra Features
