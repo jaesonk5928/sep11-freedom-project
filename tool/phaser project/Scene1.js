@@ -13,12 +13,14 @@ class Scene1 extends Phaser.Scene {
   create() {
     var jumpPad;
     const back = this.add.image(800, 300, 'background');
-    const pad = this.add.image(100, 200, 'platform');
-
-    jumpPad = this.physics.add.staticGroup();
+    const pad = this.add.image(200, 600, 'platform');
 
     back.scale = 2.8;
     pad.scale = 0.25;
+
+    jumpPad = this.physics.add.staticGroup();
+
+    jumpPad.create(700, 100, 'platform');
 
   }
 
