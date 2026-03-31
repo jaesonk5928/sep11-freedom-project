@@ -18,6 +18,10 @@ class Scene1 extends Phaser.Scene {
     powering.scale = 0.25;
 
   }
+
+  update () {
+
+  }
 }
 
 
