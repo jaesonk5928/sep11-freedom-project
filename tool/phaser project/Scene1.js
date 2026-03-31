@@ -6,7 +6,7 @@ class Scene1 extends Phaser.Scene {
   preload(){
     this.load.image('background', 'assets/images/back.png');
     this.load.image('platform', 'assets/images/platform.png');
-    this.load.image('error', 'assets/images/danger.png');
+    // this.load.image('error', 'assets/images/danger.png');
   }
 
 
@@ -21,7 +21,7 @@ class Scene1 extends Phaser.Scene {
     jumpPad = this.physics.add.staticGroup();
 
     jumpPad.create(700, 100, 'platform').setScale(0.25);
-
+    jumpPad.create(500, 300, 'platform').setScale(0.25);
   }
 
   update () {
