@@ -20,7 +20,7 @@ class Scene1 extends Phaser.Scene {
 
     jumpPad = this.physics.add.staticGroup();
 
-    jumpPad.create(700, 100, 'platform');
+    jumpPad.create(700, 100, 'platform').setScale(0.25);
 
   }
 
