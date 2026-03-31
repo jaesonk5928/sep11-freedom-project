@@ -9,9 +9,9 @@ class Scene1 extends Phaser.Scene {
     this.load.image('error', 'assets/images/danger.png');
   }
 
-  var jumpPad;
 
   create() {
+    var jumpPad;
     const back = this.add.image(800, 300, 'background');
     const pad = this.add.image(100, 200, 'platform');
 
