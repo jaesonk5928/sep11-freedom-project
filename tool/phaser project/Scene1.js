@@ -14,7 +14,7 @@ class Scene1 extends Phaser.Scene {
     const powering = this.add.image(100, 200, 'powerUp');
     this.add.image(800, 300, 'error');
 
-    back.scale = 5;
+    back.scale = 5.5;
     powering.scale = 0.25;
 
   }
