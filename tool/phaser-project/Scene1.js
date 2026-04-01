@@ -17,21 +17,20 @@ class Scene1 extends Phaser.Scene {
     player.setBounce(0.2);
     player.setCollideWorldBounds(true);
     player.body.setGravityY(100);
+    this.physics.world.createDebugGraphic();
 
     var jumpPad;
     // const back = this.add.image(800, 300, 'background');
-    const pad = this.physics.add.staticImage(200, 600, 'platform').setScale(0.25).refreshBody();
+    const pad = this.physics.add.staticImage(200, 600, 'platform').setScale(0.15).refreshBody();
 
     jumpPad = this.physics.add.staticGroup();
 
-    jumpPad.create(700, 100, 'platform').setScale(0.25).refreshBody();
-    jumpPad.create(500, 300, 'platform').setScale(0.25).refreshBody();
+    jumpPad.create(700, 100, 'platform').setScale(0.15).refreshBody();
+    jumpPad.create(500, 300, 'platform').setScale(0.15).refreshBody();
 
     this.physics.add.collider(player, pad);
 
     // back.scale = 2.8;
-    pad.scale = 0.25;
-
     this.anims.create({
         key: 'left',
         frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
