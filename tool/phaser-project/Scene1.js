@@ -18,6 +18,8 @@ class Scene1 extends Phaser.Scene {
     player.setCollideWorldBounds(true);
     player.body.setGravityY(100);
     this.physics.world.createDebugGraphic();
+    cursors = this.input.keyboard.createCursorKeys();
+
 
     var jumpPad;
     // const back = this.add.image(800, 300, 'background');
@@ -51,7 +53,6 @@ class Scene1 extends Phaser.Scene {
         repeat: -1
     });
 
-    cursors = this.input.keyboard.createCursorKeys();
   }
   update () {
     if (cursors.left.isDown)
