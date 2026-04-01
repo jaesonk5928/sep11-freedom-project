@@ -4,7 +4,7 @@ class Scene1 extends Phaser.Scene {
   }
 
   preload(){
-    // this.load.image('background', 'assets/images/back.png');
+    this.load.image('background', 'assets/images/back.png');
     this.load.image('platform', 'assets/images/platform.png');
     this.load.spritesheet('dude', 'assets/spritesheets/dude.png',{
          frameWidth: 32,
@@ -22,7 +22,7 @@ class Scene1 extends Phaser.Scene {
 
 
     var jumpPad;
-    // const back = this.add.image(800, 300, 'background');
+    const back = this.add.image(800, 300, 'background');
     const pad = this.physics.add.staticImage(150, 670, 'platform').setDisplaySize(300, 50).refreshBody(); // bottom
 
     jumpPad = this.physics.add.staticGroup();
