@@ -23,12 +23,12 @@ class Scene1 extends Phaser.Scene {
 
     var jumpPad;
     // const back = this.add.image(800, 300, 'background');
-    const pad = this.physics.add.staticImage(200, 600, 'platform').setScale(0.15).refreshBody();
+    const pad = this.physics.add.staticImage(200, 600, 'platform').setSize(200, 50).refreshBody();
 
     jumpPad = this.physics.add.staticGroup();
 
-    jumpPad.create(700, 100, 'platform').setScale(0.15).refreshBody();
-    jumpPad.create(500, 300, 'platform').setScale(0.15).refreshBody();
+    jumpPad.create(700, 100, 'platform').setSize(200, 50).refreshBody();
+    jumpPad.create(500, 300, 'platform').setSize(200, 50).refreshBody();
 
     this.physics.add.collider(player, pad);
 
