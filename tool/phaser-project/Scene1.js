@@ -13,7 +13,7 @@ class Scene1 extends Phaser.Scene {
   }
 
   create() {
-    var player = this.physics.add.sprite(200, 375, 'dude');
+    this.player = this.physics.add.sprite(200, 375, 'dude');
     player.setBounce(0.2);
     player.setCollideWorldBounds(true);
     player.body.setGravityY(100);
