@@ -13,7 +13,7 @@ class Scene1 extends Phaser.Scene {
   }
 
   create() {
-    this.player = this.physics.add.sprite(200, 375, 'dude');
+    var player = this.physics.add.sprite(200, 375, 'dude');
     player.setBounce(0.2);
     player.setCollideWorldBounds(true);
     player.body.setGravityY(100);
@@ -27,7 +27,7 @@ class Scene1 extends Phaser.Scene {
     jumpPad.create(700, 100, 'platform').setScale(0.25).refreshBody();
     jumpPad.create(500, 300, 'platform').setScale(0.25).refreshBody();
 
-    this.physics.add.collider(play, jumpPad);
+    this.physics.add.collider(player, pad);
 
     // back.scale = 2.8;
     pad.scale = 0.25;
@@ -51,12 +51,37 @@ class Scene1 extends Phaser.Scene {
         frameRate: 10,
         repeat: -1
     });
+
+    cursors = this.input.keyboard.createCursorKeys();
   }
   update () {
+    if (cursors.left.isDown)
+    {
+      player.setVelocityX(-160);
 
-  }
+      player.anims.play('left', true);
+    }
+    else if (cursors.right.isDown)
+    {
+      player.setVelocityX(160);
 
-}
+      player.anims.play('right', true);
+    }
+    else
+    {
+      player.setVelocityX(0);
+
+      player.anims.play('turn');
+    }
+
+    if (cursors.up.isDown) // && player.body.touching.down)
+    {
+      player.setVelocityY(-330);
+    }
+
+    }
+
+    }
 
 
 
