@@ -14,10 +14,11 @@ class Scene1 extends Phaser.Scene {
 
   create() {
     var player = this.physics.add.sprite(200, 375, 'dude');
-    player.setBounce(0.1);
+    player.setBounce(0.3);
     player.setCollideWorldBounds(true);
     player.body.setGravityY(100);
     this.physics.world.createDebugGraphic();
+    this.cursors = this.input.keyboard.createCursorKeys();
 
 
     var jumpPad;
@@ -54,12 +55,12 @@ class Scene1 extends Phaser.Scene {
 
   }
   update () {
-    if (cursors.left.isDown)
-    {
-      player.setVelocityX(-160);
+    // if (cursors.left.isDown)
+    // {
+    //   player.setVelocityX(-160);
 
-      player.anims.play('left', true);
-    }
+    //   player.anims.play('left', true);
+    // }
     // else if (cursors.right.isDown)
     // {
     //   player.setVelocityX(160);
