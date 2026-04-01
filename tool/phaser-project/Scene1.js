@@ -18,7 +18,6 @@ class Scene1 extends Phaser.Scene {
     player.setCollideWorldBounds(true);
     player.body.setGravityY(100);
     this.physics.world.createDebugGraphic();
-    var cursors = this.input.keyboard.createCursorKeys();
 
 
     var jumpPad;
