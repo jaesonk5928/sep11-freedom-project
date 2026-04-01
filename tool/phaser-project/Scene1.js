@@ -27,9 +27,7 @@ class Scene1 extends Phaser.Scene {
     jumpPad.create(700, 100, 'platform').setScale(0.25).refreshBody();
     jumpPad.create(500, 300, 'platform').setScale(0.25).refreshBody();
 
-    // this.physics.add.collider(play, pad);
-
-    // this.physics.add.collider(play, pad);
+    this.physics.add.collider(play, jumpPad);
 
     // back.scale = 2.8;
     pad.scale = 0.25;
