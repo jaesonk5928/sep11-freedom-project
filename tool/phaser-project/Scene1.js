@@ -14,7 +14,7 @@ class Scene1 extends Phaser.Scene {
 
   create() {
     var player = this.physics.add.sprite(200, 375, 'dude');
-    player.setBounce(0.5);
+    player.setBounce(0.1);
     player.setCollideWorldBounds(true);
     player.body.setGravityY(100);
     this.physics.world.createDebugGraphic();
@@ -23,12 +23,12 @@ class Scene1 extends Phaser.Scene {
 
     var jumpPad;
     // const back = this.add.image(800, 300, 'background');
-    const pad = this.physics.add.staticImage(200, 600, 'platform').setDisplaySize(200, 50).refreshBody();
+    const pad = this.physics.add.staticImage(150, 670, 'platform').setDisplaySize(300, 50).refreshBody(); // bottom
 
     jumpPad = this.physics.add.staticGroup();
 
-    jumpPad.create(700, 100, 'platform').setDisplaySize(200, 50).refreshBody();
-    jumpPad.create(500, 300, 'platform').setDisplaySize(200, 50).refreshBody();
+    jumpPad.create(700, 100, 'platform').setDisplaySize(300, 50).refreshBody(); // mid
+    jumpPad.create(500, 300, 'platform').setDisplaySize(300, 50).refreshBody(); // top
 
     this.physics.add.collider(player, pad);
 
@@ -55,12 +55,12 @@ class Scene1 extends Phaser.Scene {
 
   }
   update () {
-    // if (cursors.left.isDown)
-    // {
-    //   player.setVelocityX(-160);
+    if (cursors.left.isDown)
+    {
+      player.setVelocityX(-160);
 
-    //   player.anims.play('left', true);
-    // }
+      player.anims.play('left', true);
+    }
     // else if (cursors.right.isDown)
     // {
     //   player.setVelocityX(160);
