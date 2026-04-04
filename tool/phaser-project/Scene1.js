@@ -32,7 +32,7 @@ class Scene1 extends Phaser.Scene {
 
     this.physics.add.collider(player, pad);
 
-    // back.scale = 2.8;
+    back.scale = 2.8;
     this.anims.create({
         key: 'left',
         frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
