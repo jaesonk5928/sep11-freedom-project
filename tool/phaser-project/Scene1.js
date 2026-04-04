@@ -218,10 +218,10 @@ class Scene1 extends Phaser.Scene {
 
     // player movement
     if (this.cursors.left.isDown) {
-      player.setVelocityX(-150); // Move left
+      player.setVelocityX(-180); // Move left
       player.anims.play('left', true); // Plays left animation
     } else if (this.cursors.right.isDown) {
-      player.setVelocityX(150); // Move right
+      player.setVelocityX(180); // Move right
       player.anims.play('right', true); // Plays right animation
     } else {
       player.setVelocityX(0); // Stop moving X-axis
@@ -229,7 +229,7 @@ class Scene1 extends Phaser.Scene {
     }
 
     if (this.cursors.up.isDown && player.body.touching.down) {
-      player.setVelocityY(-330); // Jumps
+      player.setVelocityY(-480); // Jumps
     }
   }
 
