@@ -23,11 +23,11 @@ class Scene1 extends Phaser.Scene {
     const jumpPad = this.physics.add.staticGroup();
     jumpPad.create(700, 100, 'platform').setDisplaySize(175, 50).refreshBody(); // mid
     jumpPad.create(500, 300, 'platform').setDisplaySize(175, 50).refreshBody(); // top
-    jumpPad.create(300, 600, 'platform').setDisplaySize(175, 50).refreshBody(); // mid
+    jumpPad.create(600, 600, 'platform').setDisplaySize(175, 50).refreshBody(); // bottom mid
 
 
     // Create player sprite
-    var player = this.physics.add.sprite(300, 375, 'dude');
+    var player = this.physics.add.sprite(250, 375, 'dude');
     player.setBounce(0.1);
     player.setCollideWorldBounds(true);
     player.body.setGravityY(200);
