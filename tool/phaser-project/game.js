@@ -1,6 +1,6 @@
 var config = {
-  width: 1600,
-  height: 1600,
+  width: 1200,
+  height: 1200,
   backgroundColor: 0x000000,
   physics: {
     default: 'arcade',
