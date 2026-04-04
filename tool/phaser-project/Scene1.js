@@ -104,16 +104,16 @@ class Scene1 extends Phaser.Scene {
     back.setDepth(-1);  // Set depth to make sure the background stays behind other elements
 
     // Create platforms
-    const pad = this.physics.add.staticImage(150, 670, 'platform').setDisplaySize(300, 50).refreshBody(); // bottom
+    const pad = this.physics.add.staticImage(150, 670, 'platform').setDisplaySize(300, 40).refreshBody(); // bottom
     const jumpPad = this.physics.add.staticGroup();
-    jumpPad.create(700, 100, 'platform').setDisplaySize(300, 50).refreshBody(); // mid
-    jumpPad.create(500, 300, 'platform').setDisplaySize(300, 50).refreshBody(); // top
+    jumpPad.create(700, 100, 'platform').setDisplaySize(300, 40).refreshBody(); // mid
+    jumpPad.create(500, 300, 'platform').setDisplaySize(300, 40).refreshBody(); // top
 
     // Create player sprite
-    var player = this.physics.add.sprite(100, 375, 'dude');
+    var player = this.physics.add.sprite(300, 375, 'dude');
     player.setBounce(0.1);
     player.setCollideWorldBounds(true);
-    player.body.setGravityY(300);
+    player.body.setGravityY(200);
 
     // Set up player animation
     this.anims.create({
@@ -158,18 +158,18 @@ class Scene1 extends Phaser.Scene {
     const player = this.player;
 
     if (this.cursors.left.isDown) {
-      player.setVelocityX(-160); // Move left
-      player.anims.play('left', true); // Play left animation
+      player.setVelocityX(-150); // Move left
+      player.anims.play('left', true); // Plays left animation
     } else if (this.cursors.right.isDown) {
-      player.setVelocityX(160); // Move right
-      player.anims.play('right', true); // Play right animation
+      player.setVelocityX(150); // Move right
+      player.anims.play('right', true); // Plays right animation
     } else {
-      player.setVelocityX(0); // Stop moving horizontally
+      player.setVelocityX(0); // Stop moving X-axis
       player.anims.play('turn', true); // Play idle animation
     }
 
     if (this.cursors.up.isDown && player.body.touching.down) {
-      player.setVelocityY(-330); // Jump
+      player.setVelocityY(-630); // Jumps
     }
   }
 }
