@@ -19,11 +19,11 @@ class Scene1 extends Phaser.Scene {
     back.setDepth(-1);  // Set depth to make sure the background stays behind other elements
 
     // Create platforms
-    const pad = this.physics.add.staticImage(150, 670, 'platform').setDisplaySize(175, 50).refreshBody(); // bottom
+    const pad = this.physics.add.staticImage(150, 670, 'platform').setDisplaySize(175, 60).refreshBody(); // bottom
     const jumpPad = this.physics.add.staticGroup();
-    jumpPad.create(700, 100, 'platform').setDisplaySize(175, 50).refreshBody(); // mid
-    jumpPad.create(500, 300, 'platform').setDisplaySize(175, 50).refreshBody(); // top
-    jumpPad.create(600, 600, 'platform').setDisplaySize(175, 50).refreshBody(); // bottom mid
+    jumpPad.create(700, 100, 'platform').setDisplaySize(175, 60).refreshBody(); // mid
+    jumpPad.create(500, 300, 'platform').setDisplaySize(175, 60).refreshBody(); // top
+    jumpPad.create(600, 600, 'platform').setDisplaySize(175, 60).refreshBody(); // bottom mid
 
 
     // Create player sprite
