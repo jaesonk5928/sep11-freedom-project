@@ -6,6 +6,7 @@ class Scene1 extends Phaser.Scene {
   preload() {
     this.load.image('background', 'assets/images/back.png');
     this.load.image('platform', 'assets/images/platform.png');
+    this.load.image('powerUp', 'assets/images/power.png');
     this.load.spritesheet('dude', 'assets/spritesheets/dude.png', {
       frameWidth: 32,
       frameHeight: 48
@@ -27,7 +28,7 @@ class Scene1 extends Phaser.Scene {
 
 
     // Create player sprite
-    var player = this.physics.add.sprite(250, 375, 'dude');
+    var player = this.physics.add.sprite(150, 375, 'dude');
     player.setBounce(0.1);
     player.setCollideWorldBounds(true);
     player.body.setGravityY(200);
