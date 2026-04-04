@@ -1,7 +1,7 @@
 # Plan
 
 ## Tool: Phaser
-## Product: Horror/Adventure Game
+## Product: Adventure Game
 
 ## Timeline
 
