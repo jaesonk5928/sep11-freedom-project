@@ -14,10 +14,10 @@ class Scene1 extends Phaser.Scene {
   }
 
   create() {
-    // Background first, scale it and ensure it stays behind
+    // background first
     const back = this.add.image(800, 300, 'background');
     back.scale = 2.8;
-    back.setDepth(-1);  // Set depth to make sure the background stays behind other elements
+    back.setDepth(-1); // background stays behind other elements
 
     // Create platforms (static objects)
     const pad = this.physics.add.staticImage(150, 670, 'platform').setDisplaySize(175, 60).refreshBody(); // bottom
@@ -26,7 +26,7 @@ class Scene1 extends Phaser.Scene {
     jumpPad.create(500, 300, 'platform').setDisplaySize(175, 60).refreshBody(); // top
     jumpPad.create(500, 600, 'platform').setDisplaySize(175, 60).refreshBody(); // bottom mid
 
-    // Create player sprite
+    // Creates player sprite
     var player = this.physics.add.sprite(150, 575, 'dude');
     player.setBounce(0.1);
     player.setCollideWorldBounds(true);
@@ -53,30 +53,25 @@ class Scene1 extends Phaser.Scene {
       repeat: -1
     });
 
-    // Make sure player sprite is on top of other elements
-    player.setDepth(1);  // Ensure player is drawn on top of background
+    player.setDepth(1);
 
-    // Set collision for player and platforms
+    // Set collision player and platforms
     this.physics.add.collider(player, pad);
-    this.physics.add.collider(player, jumpPad); // Add collision with all platforms in the group
+    this.physics.add.collider(player, jumpPad); // Add collision with all platforms
 
-    // Create power-up object (make it physics-enabled)
-    this.powerUp = this.physics.add.image(500, 500, 'powerUp').setScale(0.1);
-    this.powerUp.setBounce(0.5); // Make it bounce a little
-    this.powerUp.setCollideWorldBounds(true); // Keep the power-up inside the world bounds
-    this.powerUp.body.setGravityY(200); // Apply gravity to the power-up to make it fall
+    // Creates power-up object
+    this.powerUp = this.physics.add.image(500, 500, 'powerUp').setScale(0.05);
+    this.powerUp.setBounce(0.1); // little power bounce
+    this.powerUp.setCollideWorldBounds(true); // Keep the power-up inside
+    this.powerUp.body.setGravityY(300); // Applys gravity
 
-    // Add collision for power-up and platforms
+    // Adds collision for power-up and platforms
     this.physics.add.collider(this.powerUp, jumpPad); // Make sure the power-up collides with all platforms
-    this.physics.add.collider(this.powerUp, pad); // Collision with the bottom platform
 
-    // Create debug graphics for collision (optional)
     this.physics.world.createDebugGraphic();
 
     // Set up cursor keys for player movement
     this.cursors = this.input.keyboard.createCursorKeys();
-
-    // Create overlap between player and power-up
     this.physics.add.overlap(player, this.powerUp, this.collectPowerUp, null, this);
 
     // Store the player object as part of the scene for later use in update
@@ -109,14 +104,10 @@ class Scene1 extends Phaser.Scene {
     powerUp.setVisible(false);
     powerUp.setActive(false);
 
-    // You can add more effects here (like boosting player speed)
-    console.log("Power-up collected!");
+    // Boosts the player's speed
+    player.setVelocityX(400); // Temporarily increase speed to 400
 
-    // Example: Boost the player's speed temporarily
-    player.setVelocityX(300); // Temporarily increase speed to 300
-
-    // Optionally, re-enable the power-up after a short delay
-    this.time.delayedCall(2000, () => {
+    this.time.delayedCall(3000, () => {
       powerUp.setVisible(true);
       powerUp.setActive(true);
       powerUp.setPosition(400, 500); // Reset position (or change to a new location)
