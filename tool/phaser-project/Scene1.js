@@ -83,10 +83,10 @@ class Scene1 extends Phaser.Scene {
 
     // player movement
     if (this.cursors.left.isDown) {
-      player.setVelocityX(-150); // Move left
+      player.setVelocityX(-120); // Move left
       player.anims.play('left', true); // Plays left animation
     } else if (this.cursors.right.isDown) {
-      player.setVelocityX(150); // Move right
+      player.setVelocityX(120); // Move right
       player.anims.play('right', true); // Plays right animation
     } else {
       player.setVelocityX(0); // Stop moving X-axis
@@ -94,7 +94,7 @@ class Scene1 extends Phaser.Scene {
     }
 
     if (this.cursors.up.isDown && player.body.touching.down) {
-      player.setVelocityY(-550); // Jumps
+      player.setVelocityY(-480); // Jumps
     }
   }
 
@@ -105,12 +105,12 @@ class Scene1 extends Phaser.Scene {
     powerUp.setActive(false);
 
     // Boosts the player's speed
-    player.setVelocityX(400); // Temporarily increase speed to 400
+    player.setVelocityY(600); // Temporarily increase speed to 400
 
     this.time.delayedCall(3000, () => {
       powerUp.setVisible(true);
       powerUp.setActive(true);
-      powerUp.setPosition(400, 500); // Reset position (or change to a new location)
+      powerUp.setPosition(500, 500); // Reset position (or change to a new location)
     });
   }
 }
