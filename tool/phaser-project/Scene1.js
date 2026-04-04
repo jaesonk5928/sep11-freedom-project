@@ -180,36 +180,32 @@ class Scene1 extends Phaser.Scene {
     // Create power-ups group (physics-enabled group)
     this.powerUpGroup = this.physics.add.group({
       key: 'powerUp',
-      repeat: 8,  // Set number of power-ups to spawn (5 total power-ups)
+      repeat: 5,  // Set number of power-ups to spawn (5 total power-ups)
       setXY: { x: 100, y: 100, stepX: 200 }  // Set initial positions for power-ups
     });
 
     // Loop through each power-up and apply random positioning
-    this.powerUpGroup.getChildren().forEach(powerUp => {
-      // Randomize position within a specific range (adjust as needed)
+      this.powerUpGroup.getChildren().forEach(powerUp => {
       powerUp.setPosition(Phaser.Math.Between(100, 700), Phaser.Math.Between(200, 800));
 
       // Make power-up physics-enabled
-      powerUp.setBounce(0.1); // Bounce when it hits platforms
-      powerUp.setCollideWorldBounds(true); // Keep the power-up within the world bounds
-      powerUp.body.setGravityY(200); // Apply gravity to the power-up
+      powerUp.setBounce(0.1);
+      powerUp.setCollideWorldBounds(true);
+      powerUp.body.setGravityY(200);
       powerUp.setScale(0.05);
     });
 
     // Add collision for power-ups and platforms
-    this.physics.add.collider(this.powerUpGroup, jumpPad); // Power-ups collide with all platforms
-    this.physics.add.collider(this.powerUpGroup, pad); // Collision with the bottom platform
+    this.physics.add.collider(this.powerUpGroup, jumpPad);
+    this.physics.add.collider(this.powerUpGroup, pad);
 
-    // Create debug graphics for collision (optional)
     this.physics.world.createDebugGraphic();
 
-    // Set up cursor keys for player movement
     this.cursors = this.input.keyboard.createCursorKeys();
 
     // Create overlap between player and power-up group
     this.physics.add.overlap(player, this.powerUpGroup, this.collectPowerUp, null, this);
 
-    // Store the player object as part of the scene for later use in update
     this.player = player;
   }
 
@@ -234,19 +230,13 @@ class Scene1 extends Phaser.Scene {
   }
 
   // Power-up collection function
-  collectPowerUp(player, powerUp) {
-    // Remove the power-up from the game world
+    collectPowerUp(player, powerUp) {
+    // Removew the power-up from the game world
     powerUp.setVisible(false);
     powerUp.setActive(false);
 
-    // You can add more effects here (like boosting player speed)
-    console.log("Power-up collected!");
 
-    // Example: Boost the player's speed temporarily
-    player.setVelocityX(300); // Temporarily increase speed to 300
-
-    // Optionally, re-enable the power-up after a short delay
-    this.time.delayedCall(2000, () => {
+    this.time.delayedCall(6000, () => {
       powerUp.setVisible(true);
       powerUp.setActive(true);
       powerUp.setPosition(Phaser.Math.Between(100, 700), Phaser.Math.Between(200, 800)); // Reset position randomly
