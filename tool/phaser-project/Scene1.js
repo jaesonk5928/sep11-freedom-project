@@ -193,6 +193,7 @@ class Scene1 extends Phaser.Scene {
       powerUp.setBounce(0.1); // Bounce when it hits platforms
       powerUp.setCollideWorldBounds(true); // Keep the power-up within the world bounds
       powerUp.body.setGravityY(200); // Apply gravity to the power-up
+      powerUp.setScale(0.05);
     });
 
     // Add collision for power-ups and platforms
