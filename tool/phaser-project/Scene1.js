@@ -1,6 +1,123 @@
+// class Scene1 extends Phaser.Scene {
+//   constructor() {
+//     super("bootGame");
+//   }
+
+//   preload() {
+//     this.load.image('background', 'assets/images/back.png');
+//     this.load.image('platform', 'assets/images/platform.png');
+//     this.load.image('powerUp', 'assets/images/power.png');
+//     this.load.spritesheet('dude', 'assets/spritesheets/dude.png', {
+//       frameWidth: 32,
+//       frameHeight: 48
+//     });
+//   }
+
+//   create() {
+//     // background first
+//     const back = this.add.image(800, 300, 'background');
+//     back.scale = 2.8;
+//     back.setDepth(-1); // background stays behind other elements
+
+//     // Create platforms (static objects)
+//     const pad = this.physics.add.staticImage(150, 670, 'platform').setDisplaySize(175, 60).refreshBody(); // bottom
+//     const jumpPad = this.physics.add.staticGroup();
+//     jumpPad.create(700, 100, 'platform').setDisplaySize(175, 60).refreshBody(); // mid
+//     jumpPad.create(500, 300, 'platform').setDisplaySize(175, 60).refreshBody(); // top
+//     jumpPad.create(500, 600, 'platform').setDisplaySize(175, 60).refreshBody(); // bottom mid
+
+//     // Creates player sprite
+//     var player = this.physics.add.sprite(150, 575, 'dude');
+//     player.setBounce(0.1);
+//     player.setCollideWorldBounds(true);
+//     player.body.setGravityY(200);
+
+//     // Set up player animation
+//     this.anims.create({
+//       key: 'left',
+//       frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+//       frameRate: 10,
+//       repeat: -1
+//     });
+
+//     this.anims.create({
+//       key: 'turn',
+//       frames: [{ key: 'dude', frame: 4 }],
+//       frameRate: 20
+//     });
+
+//     this.anims.create({
+//       key: 'right',
+//       frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+//       frameRate: 10,
+//       repeat: -1
+//     });
+
+//     player.setDepth(1);
+
+//     // Set collision player and platforms
+//     this.physics.add.collider(player, pad);
+//     this.physics.add.collider(player, jumpPad); // Add collision with all platforms
+
+//     // Creates power-up object
+//     this.powerUp = this.physics.add.image(500, 500, 'powerUp').setScale(0.05);
+//     this.powerUp.setBounce(0.1); // little power bounce
+//     this.powerUp.setCollideWorldBounds(true); // Keep the power-up inside
+//     this.powerUp.body.setGravityY(300); // Applys gravity
+
+//     // Adds collision for power-up and platforms
+//     this.physics.add.collider(this.powerUp, jumpPad); // Make sure the power-up collides with all platforms
+
+//     this.physics.world.createDebugGraphic();
+
+//     // Set up cursor keys for player movement
+//     this.cursors = this.input.keyboard.createCursorKeys();
+//     this.physics.add.overlap(player, this.powerUp, this.collectPowerUp, null, this);
+
+//     // Store the player object as part of the scene for later use in update
+//     this.player = player;
+//   }
+
+//   update() {
+//     const player = this.player;
+
+//     // player movement
+//     if (this.cursors.left.isDown) {
+//       player.setVelocityX(-120); // Move left
+//       player.anims.play('left', true); // Plays left animation
+//     } else if (this.cursors.right.isDown) {
+//       player.setVelocityX(120); // Move right
+//       player.anims.play('right', true); // Plays right animation
+//     } else {
+//       player.setVelocityX(0); // Stop moving X-axis
+//       player.anims.play('turn', true); // Play idle animation
+//     }
+
+//     if (this.cursors.up.isDown && player.body.touching.down) {
+//       player.setVelocityY(-480); // Jumps
+//     }
+//   }
+
+//   // Power-up collection function
+//   collectPowerUp(player, powerUp) {
+//     // Remove the power-up from the game world
+//     powerUp.setVisible(false);
+//     powerUp.setActive(false);
+
+//     // Boosts the player's speed
+//     player.setVelocityY(600); // Temporarily increase speed to 400
+
+//     this.time.delayedCall(3000, () => {
+//       powerUp.setVisible(true);
+//       powerUp.setActive(true);
+//       powerUp.setPosition(500, 500); // Reset position (or change to a new location)
+//     });
+//   }
+// }
 class Scene1 extends Phaser.Scene {
   constructor() {
     super("bootGame");
+    this.powerUps = [];  // Array to store power-ups
   }
 
   preload() {
@@ -14,19 +131,19 @@ class Scene1 extends Phaser.Scene {
   }
 
   create() {
-    // background first
+    // Background first, scale it and ensure it stays behind
     const back = this.add.image(800, 300, 'background');
     back.scale = 2.8;
-    back.setDepth(-1); // background stays behind other elements
+    back.setDepth(-1);  // Set depth to make sure the background stays behind other elements
 
     // Create platforms (static objects)
     const pad = this.physics.add.staticImage(150, 670, 'platform').setDisplaySize(175, 60).refreshBody(); // bottom
     const jumpPad = this.physics.add.staticGroup();
     jumpPad.create(700, 100, 'platform').setDisplaySize(175, 60).refreshBody(); // mid
     jumpPad.create(500, 300, 'platform').setDisplaySize(175, 60).refreshBody(); // top
-    jumpPad.create(500, 600, 'platform').setDisplaySize(175, 60).refreshBody(); // bottom mid
+    jumpPad.create(600, 600, 'platform').setDisplaySize(175, 60).refreshBody(); // bottom mid
 
-    // Creates player sprite
+    // Create player sprite
     var player = this.physics.add.sprite(150, 575, 'dude');
     player.setBounce(0.1);
     player.setCollideWorldBounds(true);
@@ -53,26 +170,43 @@ class Scene1 extends Phaser.Scene {
       repeat: -1
     });
 
-    player.setDepth(1);
+    // Make sure player sprite is on top of other elements
+    player.setDepth(1);  // Ensure player is drawn on top of background
 
-    // Set collision player and platforms
+    // Set collision for player and platforms
     this.physics.add.collider(player, pad);
-    this.physics.add.collider(player, jumpPad); // Add collision with all platforms
+    this.physics.add.collider(player, jumpPad); // Add collision with all platforms in the group
 
-    // Creates power-up object
-    this.powerUp = this.physics.add.image(500, 500, 'powerUp').setScale(0.05);
-    this.powerUp.setBounce(0.1); // little power bounce
-    this.powerUp.setCollideWorldBounds(true); // Keep the power-up inside
-    this.powerUp.body.setGravityY(300); // Applys gravity
+    // Create power-ups group (physics-enabled group)
+    this.powerUpGroup = this.physics.add.group({
+      key: 'powerUp',
+      repeat: 8,  // Set number of power-ups to spawn (5 total power-ups)
+      setXY: { x: 100, y: 100, stepX: 200 }  // Set initial positions for power-ups
+    });
 
-    // Adds collision for power-up and platforms
-    this.physics.add.collider(this.powerUp, jumpPad); // Make sure the power-up collides with all platforms
+    // Loop through each power-up and apply random positioning
+    this.powerUpGroup.getChildren().forEach(powerUp => {
+      // Randomize position within a specific range (adjust as needed)
+      powerUp.setPosition(Phaser.Math.Between(100, 700), Phaser.Math.Between(200, 800));
 
+      // Make power-up physics-enabled
+      powerUp.setBounce(0.1); // Bounce when it hits platforms
+      powerUp.setCollideWorldBounds(true); // Keep the power-up within the world bounds
+      powerUp.body.setGravityY(200); // Apply gravity to the power-up
+    });
+
+    // Add collision for power-ups and platforms
+    this.physics.add.collider(this.powerUpGroup, jumpPad); // Power-ups collide with all platforms
+    this.physics.add.collider(this.powerUpGroup, pad); // Collision with the bottom platform
+
+    // Create debug graphics for collision (optional)
     this.physics.world.createDebugGraphic();
 
     // Set up cursor keys for player movement
     this.cursors = this.input.keyboard.createCursorKeys();
-    this.physics.add.overlap(player, this.powerUp, this.collectPowerUp, null, this);
+
+    // Create overlap between player and power-up group
+    this.physics.add.overlap(player, this.powerUpGroup, this.collectPowerUp, null, this);
 
     // Store the player object as part of the scene for later use in update
     this.player = player;
@@ -83,10 +217,10 @@ class Scene1 extends Phaser.Scene {
 
     // player movement
     if (this.cursors.left.isDown) {
-      player.setVelocityX(-120); // Move left
+      player.setVelocityX(-150); // Move left
       player.anims.play('left', true); // Plays left animation
     } else if (this.cursors.right.isDown) {
-      player.setVelocityX(120); // Move right
+      player.setVelocityX(150); // Move right
       player.anims.play('right', true); // Plays right animation
     } else {
       player.setVelocityX(0); // Stop moving X-axis
@@ -94,7 +228,7 @@ class Scene1 extends Phaser.Scene {
     }
 
     if (this.cursors.up.isDown && player.body.touching.down) {
-      player.setVelocityY(-480); // Jumps
+      player.setVelocityY(-330); // Jumps
     }
   }
 
@@ -104,13 +238,17 @@ class Scene1 extends Phaser.Scene {
     powerUp.setVisible(false);
     powerUp.setActive(false);
 
-    // Boosts the player's speed
-    player.setVelocityY(600); // Temporarily increase speed to 400
+    // You can add more effects here (like boosting player speed)
+    console.log("Power-up collected!");
 
-    this.time.delayedCall(3000, () => {
+    // Example: Boost the player's speed temporarily
+    player.setVelocityX(300); // Temporarily increase speed to 300
+
+    // Optionally, re-enable the power-up after a short delay
+    this.time.delayedCall(2000, () => {
       powerUp.setVisible(true);
       powerUp.setActive(true);
-      powerUp.setPosition(500, 500); // Reset position (or change to a new location)
+      powerUp.setPosition(Phaser.Math.Between(100, 700), Phaser.Math.Between(200, 800)); // Reset position randomly
     });
   }
 }
