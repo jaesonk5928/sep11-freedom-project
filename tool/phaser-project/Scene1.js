@@ -133,21 +133,25 @@ class Scene1 extends Phaser.Scene {
   create() {
     // Background first, scale it and ensure it stays behind
     const back = this.add.image(800, 300, 'background');
-    back.scale = 2.8;
-    back.setDepth(-1);  // Set depth to make sure the background stays behind other elements
+    back.scale = 3;
+    back.setDepth(-1);  // Sets depth to make sure the background stays behind other elements
 
-    // Create platforms (static objects)
-    const pad = this.physics.add.staticImage(150, 670, 'platform').setDisplaySize(135, 60).refreshBody(); // bottom
+    var score = 0;
+    var scoreText;
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+    // Create platforms
+    const pad = this.physics.add.staticImage(175, 670, 'platform').setDisplaySize(135, 60).refreshBody(); // bottom
     const jumpPad = this.physics.add.staticGroup();
-    jumpPad.create(700, 100, 'platform').setDisplaySize(135, 60).refreshBody(); // mid
-    jumpPad.create(500, 300, 'platform').setDisplaySize(135, 60).refreshBody(); // top
-    jumpPad.create(600, 600, 'platform').setDisplaySize(135, 60).refreshBody(); // bottom mid
+    jumpPad.create(900, 450, 'platform').setDisplaySize(135, 60).refreshBody(); // mid
+    jumpPad.create(600, 300, 'platform').setDisplaySize(135, 60).refreshBody(); // top
+    jumpPad.create(500, 600, 'platform').setDisplaySize(135, 60).refreshBody(); // bottom mid
 
     // Create player sprite
-    var player = this.physics.add.sprite(150, 575, 'dude');
-    player.setBounce(0.1);
+    var player = this.physics.add.sprite(180, 575, 'dude');
+    player.setBounce(0.2);
     player.setCollideWorldBounds(true);
-    player.body.setGravityY(200);
+    player.body.setGravityY(150);
 
     // Set up player animation
     this.anims.create({
@@ -170,8 +174,8 @@ class Scene1 extends Phaser.Scene {
       repeat: -1
     });
 
-    // Make sure player sprite is on top of other elements
-    player.setDepth(1);  // Ensure player is drawn on top of background
+    // the player sprite is on top of other elements
+    player.setDepth(1);
 
     // Set collision for player and platforms
     this.physics.add.collider(player, pad);
@@ -180,16 +184,16 @@ class Scene1 extends Phaser.Scene {
     // Create power-ups group (physics-enabled group)
     this.powerUpGroup = this.physics.add.group({
       key: 'powerUp',
-      repeat: 5,  // Set number of power-ups to spawn (5 total power-ups)
-      setXY: { x: 100, y: 100, stepX: 200 }  // Set initial positions for power-ups
+      repeat: 30,  // Set number of power-ups to spawn
+      setXY: { x: 300, y: 800, stepX: 200 }  // Set initial positions for power-ups
     });
 
     // Loop through each power-up and apply random positioning
       this.powerUpGroup.getChildren().forEach(powerUp => {
-      powerUp.setPosition(Phaser.Math.Between(100, 700), Phaser.Math.Between(200, 800));
+      powerUp.setPosition(Phaser.Math.Between(100, 900), Phaser.Math.Between(200, 600));
 
       // Make power-up physics-enabled
-      powerUp.setBounce(0.1);
+      powerUp.setBounce(0.2);
       powerUp.setCollideWorldBounds(true);
       powerUp.body.setGravityY(200);
       powerUp.setScale(0.05);
@@ -225,21 +229,19 @@ class Scene1 extends Phaser.Scene {
     }
 
     if (this.cursors.up.isDown && player.body.touching.down) {
-      player.setVelocityY(-480); // Jumps
+      player.setVelocityY(-420); // Jumps
     }
   }
 
   // Power-up collection function
     collectPowerUp(player, powerUp) {
-    // Removew the power-up from the game world
-    powerUp.setVisible(false);
-    powerUp.setActive(false);
+       powerUp.setVisible(false);
+       powerUp.setActive(false);
 
-
-    this.time.delayedCall(6000, () => {
+    this.time.delayedCall(4000, () => {
       powerUp.setVisible(true);
       powerUp.setActive(true);
-      powerUp.setPosition(Phaser.Math.Between(100, 700), Phaser.Math.Between(200, 800)); // Reset position randomly
+      powerUp.setPosition(Phaser.Math.Between(200, 500), Phaser.Math.Between(300, 400)); // Reset position randomly
     });
   }
 }
