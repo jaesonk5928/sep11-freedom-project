@@ -241,7 +241,7 @@ class Scene1 extends Phaser.Scene {
     this.time.delayedCall(4000, () => {
       powerUp.setVisible(true);
       powerUp.setActive(true);
-      powerUp.setPosition(Phaser.Math.Between(200, 500), Phaser.Math.Between(300, 400)); // Reset position randomly
+      powerUp.setPosition(Phaser.Math.Between(50, 800), Phaser.Math.Between(300, 800)); // Reset position randomly
     });
   }
 }
