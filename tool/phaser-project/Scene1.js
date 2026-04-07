@@ -199,9 +199,14 @@ class Scene1 extends Phaser.Scene {
       powerUp.setScale(0.05);
     });
 
+
+
+
     // Add collision for power-ups and platforms
     this.physics.add.collider(this.powerUpGroup, jumpPad);
     this.physics.add.collider(this.powerUpGroup, pad);
+    this.physics.add.collider(bombs, platforms);
+
 
     this.physics.world.createDebugGraphic();
 
@@ -209,6 +214,7 @@ class Scene1 extends Phaser.Scene {
 
     // Create overlap between player and power-up group
     this.physics.add.overlap(player, this.powerUpGroup, this.collectPowerUp, null, this);
+    this.physics.add.collider(player, bombs, hitBomb, null, this);
 
     this.player = player;
   }
