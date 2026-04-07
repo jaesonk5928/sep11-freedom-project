@@ -240,9 +240,6 @@ class Scene1 extends Phaser.Scene {
       this
     );
 
-    // -------------------------
-    // FIRE ENEMIES 🔥
-    // -------------------------
     this.fires = this.physics.add.group();
 
     for (let i = 0; i < 5; i++) {
@@ -274,11 +271,8 @@ class Scene1 extends Phaser.Scene {
       this
     );
 
-    // Controls
     this.cursors = this.input.keyboard.createCursorKeys();
     this.player = player;
-
-    // Debug (optional)
     this.physics.world.createDebugGraphic();
   }
 
@@ -311,7 +305,7 @@ class Scene1 extends Phaser.Scene {
       powerUp.setActive(true);
       powerUp.setPosition(
       Phaser.Math.Between(50, 800),
-    Phaser.Math.Between(300, 800)
+      Phaser.Math.Between(300, 800)
       );
     });
   }
