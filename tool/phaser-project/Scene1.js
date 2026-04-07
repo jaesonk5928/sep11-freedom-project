@@ -72,7 +72,7 @@ class Scene1 extends Phaser.Scene {
 
     this.powerUpGroup = this.physics.add.group({
       key: 'powerUp',
-      repeat: 30,
+      repeat: 50,
       setXY: { x: 300, y: 800, stepX: 200 }
     });
 
@@ -107,7 +107,7 @@ class Scene1 extends Phaser.Scene {
         'alert'
       );
 
-      fire.setBounce(1);
+      fire.setBounce(2);
       fire.setCollideWorldBounds(true);
       fire.setVelocity(
         Phaser.Math.Between(-200, 600),
