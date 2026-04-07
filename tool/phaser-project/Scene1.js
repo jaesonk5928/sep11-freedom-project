@@ -160,7 +160,6 @@ class Scene1 extends Phaser.Scene {
     back.setScale(3);
     back.setDepth(-1);
 
-    // Score
     let score = 0;
     let scoreText = this.add.text(16, 16, 'score: 0', {
       fontSize: '32px',
@@ -209,9 +208,6 @@ class Scene1 extends Phaser.Scene {
     this.physics.add.collider(player, pad);
     this.physics.add.collider(player, jumpPad);
 
-    // -------------------------
-    // POWER-UPS
-    // -------------------------
     this.powerUpGroup = this.physics.add.group({
       key: 'powerUp',
       repeat: 30,
@@ -273,7 +269,7 @@ class Scene1 extends Phaser.Scene {
 
     this.cursors = this.input.keyboard.createCursorKeys();
     this.player = player;
-    this.physics.world.createDebugGraphic();
+    // this.physics.world.createDebugGraphic();
   }
 
   update() {
