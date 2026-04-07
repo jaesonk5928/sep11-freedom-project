@@ -238,20 +238,20 @@ class Scene1 extends Phaser.Scene {
 
     this.fires = this.physics.add.group();
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 10; i++) {
       const fire = this.fires.create(
         Phaser.Math.Between(100, 900),
         Phaser.Math.Between(0, 300),
         'alert'
       );
 
-      fire.setBounce(1);
+      fire.setBounce(3);
       fire.setCollideWorldBounds(true);
       fire.setVelocity(
-        Phaser.Math.Between(-200, 200),
-        Phaser.Math.Between(20, 100)
+        Phaser.Math.Between(-200, 600),
+        Phaser.Math.Between(20, 300)
       );
-      fire.setScale(0.1);
+      fire.setScale(0.5);
     }
 
     // Fire collisions
@@ -310,6 +310,5 @@ class Scene1 extends Phaser.Scene {
     this.physics.pause();
     player.setTint(0xff0000);
     player.anims.play('turn');
-    console.log("Game Over!");
   }
 }
