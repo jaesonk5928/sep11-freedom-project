@@ -172,9 +172,9 @@ class Scene1 extends Phaser.Scene {
       .refreshBody();
 
     const jumpPad = this.physics.add.staticGroup();
-    jumpPad.create(900, 450, 'platform').setDisplaySize(135, 60).refreshBody();
-    jumpPad.create(600, 300, 'platform').setDisplaySize(135, 60).refreshBody();
-    jumpPad.create(500, 600, 'platform').setDisplaySize(135, 60).refreshBody();
+    jumpPad.create(900, 450, 'platform').setDisplaySize(150, 60).refreshBody();
+    jumpPad.create(600, 300, 'platform').setDisplaySize(150, 60).refreshBody();
+    jumpPad.create(500, 600, 'platform').setDisplaySize(150, 60).refreshBody();
 
     // Player
     const player = this.physics.add.sprite(180, 575, 'dude');
@@ -238,14 +238,14 @@ class Scene1 extends Phaser.Scene {
 
     this.fires = this.physics.add.group();
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 3; i++) {
       const fire = this.fires.create(
         Phaser.Math.Between(100, 900),
         Phaser.Math.Between(0, 300),
         'alert'
       );
 
-      fire.setBounce(0.5);
+      fire.setBounce(1);
       fire.setCollideWorldBounds(true);
       fire.setVelocity(
         Phaser.Math.Between(-200, 600),
