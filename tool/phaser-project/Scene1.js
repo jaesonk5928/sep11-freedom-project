@@ -100,14 +100,14 @@ class Scene1 extends Phaser.Scene {
 
     this.fires = this.physics.add.group();
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 3; i++) {
       const fire = this.fires.create(
         Phaser.Math.Between(100, 900),
         Phaser.Math.Between(0, 700),
         'alert'
       );
 
-      fire.setBounce(0.99);
+      fire.setBounce(1);
       fire.setCollideWorldBounds(true);
       fire.setVelocity(
         Phaser.Math.Between(-200, 600),
