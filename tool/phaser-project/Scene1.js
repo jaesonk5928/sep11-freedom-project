@@ -172,9 +172,9 @@ class Scene1 extends Phaser.Scene {
       .refreshBody();
 
     const jumpPad = this.physics.add.staticGroup();
-    jumpPad.create(900, 450, 'platform').setDisplaySize(150, 60).refreshBody();
-    jumpPad.create(600, 300, 'platform').setDisplaySize(150, 60).refreshBody();
-    jumpPad.create(500, 600, 'platform').setDisplaySize(150, 60).refreshBody();
+    jumpPad.create(900, 450, 'platform').setDisplaySize(160, 70).refreshBody();
+    jumpPad.create(600, 300, 'platform').setDisplaySize(160, 70).refreshBody();
+    jumpPad.create(500, 600, 'platform').setDisplaySize(160, 70).refreshBody();
 
     // Player
     const player = this.physics.add.sprite(180, 575, 'dude');
@@ -269,7 +269,7 @@ class Scene1 extends Phaser.Scene {
 
     this.cursors = this.input.keyboard.createCursorKeys();
     this.player = player;
-    // this.physics.world.createDebugGraphic();
+    this.physics.world.createDebugGraphic();
   }
 
   update() {
