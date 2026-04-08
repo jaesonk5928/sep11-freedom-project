@@ -153,7 +153,7 @@ class Scene1 extends Phaser.Scene {
     }
 
     if (this.cursors.up.isDown && player.body.touching.down) {
-      player.setVelocityY(-420);
+      player.setVelocityY(-380);
     }
   }
 
