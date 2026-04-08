@@ -39,7 +39,7 @@ class Scene1 extends Phaser.Scene {
     jumpPad.create(550, 300, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
     jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody(); // top
     jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
-    jumpPad.create(185, 400, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
+    jumpPad.create(225, 400, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
 
 
     // Player
@@ -153,7 +153,7 @@ class Scene1 extends Phaser.Scene {
     }
 
     if (this.cursors.up.isDown && player.body.touching.down) {
-      player.setVelocityY(-950);
+      player.setVelocityY(-400);
     }
   }
 
