@@ -35,9 +35,9 @@ class Scene1 extends Phaser.Scene {
       .refreshBody();
 
     const jumpPad = this.physics.add.staticGroup();
-    jumpPad.create(900, 450, 'platform').setDisplaySize(160, 50).refreshBody(); // top
-    jumpPad.create(600, 300, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
-    jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody(); // bottom
+    jumpPad.create(825, 450, 'platform').setDisplaySize(160, 50).refreshBody(); // bottom
+    jumpPad.create(550, 300, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
+    jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody(); // top
     jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
     jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody();
 
