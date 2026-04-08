@@ -21,7 +21,8 @@ class Scene1 extends Phaser.Scene {
     const back = this.add.image(800, 300, 'background');
     back.setScale(3);
     back.setDepth(-1);
-
+    let randomX = random(1000);
+    let randomY = random(1000);
     let score = 0;
     let scoreText = this.add.text(16, 16, 'score: 0', {
       fontSize: '32px',
@@ -29,14 +30,15 @@ class Scene1 extends Phaser.Scene {
     });
 
     // Platforms
-    const pad = this.physics.add.staticImage(175, 670, 'platform')
+    const pad = this.physics.add.staticImage(175, 670, 'platform') // starter platform
       .setDisplaySize(135, 60)
       .refreshBody();
 
     const jumpPad = this.physics.add.staticGroup();
-    jumpPad.create(900, 450, 'platform').setDisplaySize(160, 50).refreshBody();
-    jumpPad.create(600, 300, 'platform').setDisplaySize(160, 50).refreshBody();
-    jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody();
+    jumpPad.create(900, 450, 'platform').setDisplaySize(160, 50).refreshBody(); // top
+    jumpPad.create(600, 300, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
+    jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody(); // bottom
+    jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody();
 
     // Player
     const player = this.physics.add.sprite(180, 575, 'dude');
@@ -131,7 +133,7 @@ class Scene1 extends Phaser.Scene {
 
     this.cursors = this.input.keyboard.createCursorKeys();
     this.player = player;
-    // this.physics.world.createDebugGraphic();
+    this.physics.world.createDebugGraphic();
   }
 
   update() {
