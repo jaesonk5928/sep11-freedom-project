@@ -21,12 +21,12 @@ class Scene1 extends Phaser.Scene {
     const back = this.add.image(800, 300, 'background');
     back.setScale(3);
     back.setDepth(-1);
-    let randomX = Phaser.Math.Between(150, 800);
-    let randomY = Phaser.Math.Between(100, 400);
+    let randomX = Phaser.Math.Between(0, 600);
+    let randomY = Phaser.Math.Between(0, 400);
     let score = 0;
     let scoreText = this.add.text(16, 16, 'score: 0', {
-      fontSize: '32px',
-      fill: '#000'
+        fontSize: '32px',
+        fill: '#000'
     });
 
     // Platforms
@@ -39,7 +39,8 @@ class Scene1 extends Phaser.Scene {
     jumpPad.create(550, 300, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
     jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody(); // top
     jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
-    jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody();
+    jumpPad.create(185, 400, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
+
 
     // Player
     const player = this.physics.add.sprite(180, 575, 'dude');
