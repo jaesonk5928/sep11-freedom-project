@@ -21,8 +21,8 @@ class Scene1 extends Phaser.Scene {
     const back = this.add.image(800, 300, 'background');
     back.setScale(3);
     back.setDepth(-1);
-    let randomX = Phaser.Math.Between(200, 600);
-    let randomY = Phaser.Math.Between(150, 400);
+    let randomX = Phaser.Math.Between(50, 600);
+    let randomY = Phaser.Math.Between(50, 400);
     let score = 0;
     let scoreText = this.add.text(16, 16, 'score: 0', {
         fontSize: '32px',
@@ -31,7 +31,7 @@ class Scene1 extends Phaser.Scene {
 
     // Platforms
     const pad = this.physics.add.staticImage(175, 670, 'platform') // starter platform
-      .setDisplaySize(135, 60)
+      .setDisplaySize(160, 50)
       .refreshBody();
 
     const jumpPad = this.physics.add.staticGroup();
@@ -44,9 +44,9 @@ class Scene1 extends Phaser.Scene {
 
     // Player
     const player = this.physics.add.sprite(180, 575, 'dude');
-    player.setBounce(0.2);
+    player.setBounce(0.3);
     player.setCollideWorldBounds(true);
-    player.body.setGravityY(150);
+    player.body.setGravityY(100);
     player.setDepth(1);
 
     // Animations
@@ -111,13 +111,13 @@ class Scene1 extends Phaser.Scene {
         'alert'
       );
 
-      fire.setBounce(1.05);
+      fire.setBounce(1.01);
       fire.setCollideWorldBounds(true);
       fire.setVelocity(
         Phaser.Math.Between(-200, 600),
         Phaser.Math.Between(20, 300)
       );
-      fire.setScale(0.1);
+      fire.setScale(0.075);
     }
 
     // Fire collisions
