@@ -21,8 +21,8 @@ class Scene1 extends Phaser.Scene {
     const back = this.add.image(800, 300, 'background');
     back.setScale(3);
     back.setDepth(-1);
-    let randomX = Phaser.Math.Between(50, 550);
-    let randomY = Phaser.Math.Between(20, 400);
+    let randomX = Phaser.Math.Between(50, 450);
+    let randomY = Phaser.Math.Between(100, 500);
     this.score = 0;
     this.scoreText = this.add.text(16, 16, 'score: 0', {
         fontSize: '32px',
@@ -115,7 +115,7 @@ class Scene1 extends Phaser.Scene {
         Phaser.Math.Between(-200, 600),
         Phaser.Math.Between(20, 300)
       );
-      fire.setScale(0.1);
+      fire.setScale(0.075);
     }
 
     // Fire collisions
