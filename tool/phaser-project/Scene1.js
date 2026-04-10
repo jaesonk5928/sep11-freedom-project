@@ -102,7 +102,7 @@ class Scene1 extends Phaser.Scene {
 
     this.fires = this.physics.add.group();
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
       const fire = this.fires.create(
         Phaser.Math.Between(100, 900),
         Phaser.Math.Between(0, 700),
@@ -160,7 +160,7 @@ class Scene1 extends Phaser.Scene {
     powerUp.setVisible(false);
     powerUp.setActive(false);
 
-    this.score += 1.5;
+    this.score += 9999999999999999999;
     this.scoreText.setText('Score: ' + this.score);
 
     this.time.delayedCall(8000, () => {
