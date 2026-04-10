@@ -21,8 +21,8 @@ class Scene1 extends Phaser.Scene {
     const back = this.add.image(800, 300, 'background');
     back.setScale(3);
     back.setDepth(-1);
-    let randomX = Phaser.Math.Between(50, 600);
-    let randomY = Phaser.Math.Between(50, 400);
+    let randomX = Phaser.Math.Between(50, 550);
+    let randomY = Phaser.Math.Between(20, 400);
     this.score = 0;
     this.scoreText = this.add.text(16, 16, 'score: 0', {
         fontSize: '32px',
