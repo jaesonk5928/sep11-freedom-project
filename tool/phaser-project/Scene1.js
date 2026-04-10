@@ -111,7 +111,7 @@ class Scene1 extends Phaser.Scene {
         'alert'
       );
 
-      fire.setBounce(1.05);
+      fire.setBounce(1.001);
       fire.setCollideWorldBounds(true);
       fire.setVelocity(
         Phaser.Math.Between(-200, 600),
