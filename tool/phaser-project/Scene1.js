@@ -23,8 +23,8 @@ class Scene1 extends Phaser.Scene {
     back.setDepth(-1);
     let randomX = Phaser.Math.Between(50, 600);
     let randomY = Phaser.Math.Between(50, 400);
-    let score = 0;
-    let scoreText = this.add.text(16, 16, 'score: 0', {
+    this.score = 0;
+    this.scoreText = this.add.text(16, 16, 'score: 0', {
         fontSize: '32px',
         fill: '#000'
     });
@@ -161,6 +161,9 @@ class Scene1 extends Phaser.Scene {
   collectPowerUp(player, powerUp) {
     powerUp.setVisible(false);
     powerUp.setActive(false);
+
+    this.score += 1;
+    this.scoreText.setText('Score: ' + this.score);
 
     this.time.delayedCall(4000, () => {
       powerUp.setVisible(true);
