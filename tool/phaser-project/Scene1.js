@@ -160,7 +160,7 @@ class Scene1 extends Phaser.Scene {
     powerUp.setVisible(false);
     powerUp.setActive(false);
 
-    this.score += 9999999999999999999;
+    this.score -= 5;
     this.scoreText.setText('Score: ' + this.score);
 
     this.time.delayedCall(8000, () => {
