@@ -36,11 +36,9 @@ class Scene1 extends Phaser.Scene {
 
     const jumpPad = this.physics.add.staticGroup();
     jumpPad.create(825, 450, 'platform').setDisplaySize(160, 50).refreshBody(); // bottom
-    jumpPad.create(550, 300, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
+    jumpPad.create(550, 280, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
     jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody(); // top
     jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
-    jumpPad.create(225, 400, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
-
 
     // Player
     const player = this.physics.add.sprite(180, 575, 'dude');
@@ -76,7 +74,7 @@ class Scene1 extends Phaser.Scene {
 
     this.powerUpGroup = this.physics.add.group({
       key: 'powerUp',
-      repeat: 20,
+      repeat: 50,
       setXY: { x: 300, y: 800, stepX: 200 }
     });
 
@@ -117,7 +115,7 @@ class Scene1 extends Phaser.Scene {
         Phaser.Math.Between(-200, 600),
         Phaser.Math.Between(20, 300)
       );
-      fire.setScale(0.08);
+      fire.setScale(0.1);
     }
 
     // Fire collisions
@@ -162,7 +160,7 @@ class Scene1 extends Phaser.Scene {
     powerUp.setVisible(false);
     powerUp.setActive(false);
 
-    this.score += 100000000000000000000;
+    this.score += 2;
     this.scoreText.setText('Score: ' + this.score);
 
     this.time.delayedCall(4000, () => {
