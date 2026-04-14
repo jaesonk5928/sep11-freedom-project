@@ -163,8 +163,7 @@ class Scene1 extends Phaser.Scene {
   collectPowerUp(player, powerUp) {
   // Disable physics
   powerUp.disableBody(true, true);
-  this.playerSpeed = 300;
-
+  
   this.score += 1;
   this.scoreText.setText('Score: ' + this.score);
 
