@@ -29,11 +29,7 @@ class Scene1 extends Phaser.Scene {
         fill: '#000'
     });
 
-    create() {
-    // Listen for the 'R' key down event
-    this.input.keyboard.on('keydown-R', () => {
-        this.scene.restart();
-}
+
 
     // Platforms
     const pad = this.physics.add.staticImage(175, 670, 'platform') // starter platform
@@ -72,6 +68,10 @@ class Scene1 extends Phaser.Scene {
       frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
       frameRate: 10,
       repeat: -1
+    });
+
+     this.input.keyboard.on('keydown-R', () => {
+        this.scene1.restart();
     });
 
     // Collisions (player + platforms)
