@@ -21,7 +21,7 @@ class Scene1 extends Phaser.Scene {
     const back = this.add.image(800, 300, 'background');
     back.setScale(3);
     back.setDepth(-1);
-    let randomX = Phaser.Math.Between(200, 500);
+    let randomX = Phaser.Math.Between(200, 400);
     let randomY = Phaser.Math.Between(200, 400);
     this.score = 0;
     this.scoreText = this.add.text(16, 16, 'score: 0', {
@@ -41,7 +41,7 @@ class Scene1 extends Phaser.Scene {
     jumpPad.create(550, 280, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
     jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody(); // top
     jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
-    jumpPad.create(1075, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // top
+    jumpPad.create(950, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // top
 
 
     // Player
