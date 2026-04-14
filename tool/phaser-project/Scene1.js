@@ -9,7 +9,6 @@ class Scene1 extends Phaser.Scene {
     this.load.image('platform', 'assets/images/platform.png');
     this.load.image('powerUp', 'assets/images/power.png');
     this.load.image('alert', 'assets/images/fire.png');
-
     this.load.spritesheet('dude', 'assets/spritesheets/dude.png', {
       frameWidth: 32,
       frameHeight: 48
@@ -21,15 +20,13 @@ class Scene1 extends Phaser.Scene {
     const back = this.add.image(800, 300, 'background');
     back.setScale(3);
     back.setDepth(-1);
-    let randomX = Phaser.Math.Between(200, 400);
-    let randomY = Phaser.Math.Between(200, 400);
+    let randomX = Phaser.Math.Between(200, 300);
+    let randomY = Phaser.Math.Between(300, 400);
     this.score = 0;
     this.scoreText = this.add.text(16, 16, 'score: 0', {
         fontSize: '32px',
         fill: '#000'
     });
-
-
 
     // Platforms
     const pad = this.physics.add.staticImage(175, 670, 'platform') // starter platform
@@ -41,8 +38,7 @@ class Scene1 extends Phaser.Scene {
     jumpPad.create(550, 280, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
     jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody(); // top
     jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
-    jumpPad.create(950, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // top
-
+    jumpPad.create(1000, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform 2.0
 
     // Player
     const player = this.physics.add.sprite(180, 575, 'dude');
@@ -99,9 +95,7 @@ class Scene1 extends Phaser.Scene {
 
     this.physics.add.collider(this.powerUpGroup, jumpPad);
     this.physics.add.collider(this.powerUpGroup, pad);
-
     this.physics.add.overlap(player, this.powerUpGroup, this.collectPowerUp, null,this);
-    this.playerSpeed = 150;
 
     // Fire group
     this.fires = this.physics.add.group();
@@ -127,17 +121,10 @@ class Scene1 extends Phaser.Scene {
     this.physics.add.collider(this.fires, jumpPad);
 
     // if player hits fire
-    this.physics.add.collider(
-      player,
-      this.fires,
-      this.hitFire,
-      null,
-      this
-    );
+    this.physics.add.collider(player, this.fires, this.hitFire, null, this);
 
     this.cursors = this.input.keyboard.createCursorKeys();
     this.player = player;
-    // this.physics.world.createDebugGraphic();
   }
 
   update() {
@@ -164,6 +151,7 @@ class Scene1 extends Phaser.Scene {
   // Disable physics
   powerUp.disableBody(true, true);
 
+  // score increase
   this.score += 100;
   this.scoreText.setText('Score: ' + this.score);
 
