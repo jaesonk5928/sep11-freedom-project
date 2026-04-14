@@ -152,7 +152,7 @@ class Scene1 extends Phaser.Scene {
   powerUp.disableBody(true, true);
 
   // score increase
-  this.score += 10;
+  this.score += 50;
   this.scoreText.setText('Score: ' + this.score);
 
   // Respawns the powerUp
