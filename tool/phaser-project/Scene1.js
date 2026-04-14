@@ -71,7 +71,7 @@ class Scene1 extends Phaser.Scene {
     });
 
      this.input.keyboard.on('keydown-R', () => {
-        this.scene1.restart();
+        this.scene.restart();
     });
 
     // Collisions (player + platforms)
