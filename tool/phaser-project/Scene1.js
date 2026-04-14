@@ -89,7 +89,7 @@ class Scene1 extends Phaser.Scene {
     this.powerUpGroup.getChildren().forEach(powerUp => {
       powerUp.setPosition(
         Phaser.Math.Between(200, 1000),
-        Phaser.Math.Between(400, 800)
+        Phaser.Math.Between(100, 800)
       );
       powerUp.setBounce(0.2);
       powerUp.setCollideWorldBounds(true);
@@ -164,7 +164,7 @@ class Scene1 extends Phaser.Scene {
   // Disable physics
   powerUp.disableBody(true, true);
 
-  this.score += 1;
+  this.score += 100;
   this.scoreText.setText('Score: ' + this.score);
 
   // Respawns the powerUp
