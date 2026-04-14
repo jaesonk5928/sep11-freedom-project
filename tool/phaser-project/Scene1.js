@@ -102,14 +102,14 @@ class Scene1 extends Phaser.Scene {
 
     this.fires = this.physics.add.group();
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
       const fire = this.fires.create(
         Phaser.Math.Between(100, 900),
         Phaser.Math.Between(0, 700),
         'alert'
       );
 
-      fire.setBounce(1.001);
+      fire.setBounce(1.05);
       fire.setCollideWorldBounds(true);
       fire.setVelocity(
         Phaser.Math.Between(-200, 600),
@@ -155,23 +155,28 @@ class Scene1 extends Phaser.Scene {
     }
   }
 
-  // Collect power-up
   collectPowerUp(player, powerUp) {
-    powerUp.setVisible(false);
-    powerUp.setActive(false);
+  // Disable physics
+  powerUp.disableBody(true, true);
 
-    this.score += 1;
-    this.scoreText.setText('Score: ' + this.score);
+  this.score += 1;
+  this.scoreText.setText('Score: ' + this.score);
 
-    this.time.delayedCall(8000, () => {
-      powerUp.setVisible(true);
-      powerUp.setActive(true);
-      powerUp.setPosition(
+  // Respawn smoothly
+  this.time.delayedCall(8000, () => {
+    powerUp.enableBody(
+      true,
       Phaser.Math.Between(50, 800),
-      Phaser.Math.Between(300, 800)
-      );
-    });
-  }
+      Phaser.Math.Between(300, 800),
+      true,
+      true
+    );
+
+    powerUp.setVelocity(0, 0);
+    powerUp.setBounce(0.2);
+    powerUp.setGravityY(200);
+  });
+}
 
   hitFire(player, fire) {
     this.physics.pause();
