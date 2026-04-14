@@ -41,6 +41,8 @@ class Scene1 extends Phaser.Scene {
     jumpPad.create(550, 280, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
     jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody(); // top
     jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
+    jumpPad.create(500, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // top
+
 
     // Player
     const player = this.physics.add.sprite(180, 575, 'dude');
@@ -122,7 +124,7 @@ class Scene1 extends Phaser.Scene {
         Phaser.Math.Between(-200, 600),
         Phaser.Math.Between(20, 300)
       );
-      fire.setScale(0.075);
+      fire.setScale(0.085);
     }
 
     // Fire collisions
