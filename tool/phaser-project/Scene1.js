@@ -163,7 +163,7 @@ class Scene1 extends Phaser.Scene {
   collectPowerUp(player, powerUp) {
   // Disable physics
   powerUp.disableBody(true, true);
-  
+
   this.score += 1;
   this.scoreText.setText('Score: ' + this.score);
 
@@ -189,5 +189,3 @@ class Scene1 extends Phaser.Scene {
     player.anims.play('turn');
   }
 }
-
-
