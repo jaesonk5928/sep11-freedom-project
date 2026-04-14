@@ -29,6 +29,12 @@ class Scene1 extends Phaser.Scene {
         fill: '#000'
     });
 
+    create() {
+    // Listen for the 'R' key down event
+    this.input.keyboard.on('keydown-R', () => {
+        this.scene.restart();
+}
+
     // Platforms
     const pad = this.physics.add.staticImage(175, 670, 'platform') // starter platform
       .setDisplaySize(160, 50)
@@ -184,3 +190,5 @@ class Scene1 extends Phaser.Scene {
     player.anims.play('turn');
   }
 }
+
+
