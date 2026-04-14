@@ -41,7 +41,7 @@ class Scene1 extends Phaser.Scene {
     jumpPad.create(550, 280, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
     jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody(); // top
     jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
-    jumpPad.create(500, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // top
+    jumpPad.create(1075, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // top
 
 
     // Player
