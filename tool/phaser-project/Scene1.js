@@ -100,13 +100,8 @@ class Scene1 extends Phaser.Scene {
     this.physics.add.collider(this.powerUpGroup, jumpPad);
     this.physics.add.collider(this.powerUpGroup, pad);
 
-    this.physics.add.overlap(
-      player,
-      this.powerUpGroup,
-      this.collectPowerUp,
-      null,
-      this
-    );
+    this.physics.add.overlap(player, this.powerUpGroup, this.collectPowerUp, null,this);
+    this.playerSpeed = 150;
 
     // Fire group
     this.fires = this.physics.add.group();
@@ -168,6 +163,7 @@ class Scene1 extends Phaser.Scene {
   collectPowerUp(player, powerUp) {
   // Disable physics
   powerUp.disableBody(true, true);
+  this.playerSpeed = 300;
 
   this.score += 1;
   this.scoreText.setText('Score: ' + this.score);
