@@ -106,16 +106,17 @@ class Scene1 extends Phaser.Scene {
       this
     );
 
+    // Fire group
     this.fires = this.physics.add.group();
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
       const fire = this.fires.create(
         Phaser.Math.Between(100, 900),
         Phaser.Math.Between(0, 700),
         'alert'
       );
 
-      fire.setBounce(1.05);
+      fire.setBounce(1);
       fire.setCollideWorldBounds(true);
       fire.setVelocity(
         Phaser.Math.Between(-200, 600),
@@ -128,7 +129,7 @@ class Scene1 extends Phaser.Scene {
     this.physics.add.collider(this.fires, pad);
     this.physics.add.collider(this.fires, jumpPad);
 
-    // Player hits fire
+    // if player hits fire
     this.physics.add.collider(
       player,
       this.fires,
@@ -145,6 +146,7 @@ class Scene1 extends Phaser.Scene {
   update() {
     const player = this.player;
 
+    // keys
     if (this.cursors.left.isDown) {
       player.setVelocityX(-150);
       player.anims.play('left', true);
@@ -155,12 +157,12 @@ class Scene1 extends Phaser.Scene {
       player.setVelocityX(0);
       player.anims.play('turn');
     }
-
     if (this.cursors.up.isDown && player.body.touching.down) {
       player.setVelocityY(-380);
     }
   }
 
+  // powerUp collect function
   collectPowerUp(player, powerUp) {
   // Disable physics
   powerUp.disableBody(true, true);
@@ -168,7 +170,7 @@ class Scene1 extends Phaser.Scene {
   this.score += 1;
   this.scoreText.setText('Score: ' + this.score);
 
-  // Respawn smoothly
+  // Respawns the powerUp
   this.time.delayedCall(8000, () => {
     powerUp.enableBody(
       true,
