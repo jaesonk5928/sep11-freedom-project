@@ -88,8 +88,8 @@ class Scene1 extends Phaser.Scene {
 
     this.powerUpGroup.getChildren().forEach(powerUp => {
       powerUp.setPosition(
-        Phaser.Math.Between(100, 900),
-        Phaser.Math.Between(200, 600)
+        Phaser.Math.Between(200, 1000),
+        Phaser.Math.Between(400, 800)
       );
       powerUp.setBounce(0.2);
       powerUp.setCollideWorldBounds(true);
