@@ -10,15 +10,15 @@
   - [ ] Add a "permanent" background in the webpage (Due 3/26)
   - [ ] Download a sprite (a movable character) to load in the webpage (Due 3/30)
   - [ ] Implement the "movement" keys for the character (Due 4/6)
+  - [ ] Put a "score" counter for the game (Due 4/13)
 
 #### Beyond MVP
 - [ ] Extra Features
   - [ ] Download sprites that act like powerups to help the user beat the game faster
-  - [ ] Make the bot moove faster based on "difficulty" selection
+  - [ ] Make the bot move faster based on "difficulty" selection (different scene)
   - [ ] Add a death screen "everytime" you die.
   - [ ] Add a "bot" to follow the "player" to kill them (Due 3/30)
   - [ ] Add a "sprint" feature with a specific keybind for the player (Due 4/3)
-  - [ ] Put a "score" counter for the game
   - [ ] Make a finish "screen" saying **"You Win!"**
 
 <!-- EXAMPLE
