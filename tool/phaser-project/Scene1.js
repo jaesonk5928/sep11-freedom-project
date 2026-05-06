@@ -113,10 +113,10 @@ class Scene1 extends Phaser.Scene {
 
     // Fire group
     this.fires = this.physics.add.group();
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
       const fire = this.fires.create(
-        Phaser.Math.Between(100, 900),
-        Phaser.Math.Between(0, 700),
+        Phaser.Math.Between(100, 1000),
+        Phaser.Math.Between(0, 800),
         'alert'
       );
 
@@ -126,7 +126,7 @@ class Scene1 extends Phaser.Scene {
         Phaser.Math.Between(-200, 600),
         Phaser.Math.Between(20, 300)
       );
-      fire.setScale(0.075);
+      fire.setScale(0.065);
     }
 
     this.physics.add.collider(this.fires, pad);
