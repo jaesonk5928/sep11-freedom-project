@@ -30,21 +30,21 @@ class Scene1 extends Phaser.Scene {
 
     // Platforms
     const pad = this.physics.add.staticImage(175, 670, 'platform') // starter platform
-      .setDisplaySize(160, 50)
+      .setDisplaySize(125, 35)
       .refreshBody();
 
     const jumpPad = this.physics.add.staticGroup();
-    jumpPad.create(825, 450, 'platform').setDisplaySize(160, 50).refreshBody(); // bottom
-    jumpPad.create(550, 280, 'platform').setDisplaySize(160, 50).refreshBody(); // mid
-    jumpPad.create(500, 600, 'platform').setDisplaySize(160, 50).refreshBody(); // top
-    jumpPad.create(randomX, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform
-    jumpPad.create(1000, randomY, 'platform').setDisplaySize(160, 50).refreshBody(); // random platform 2.0
+    jumpPad.create(825, 450, 'platform').setDisplaySize(125, 35).refreshBody(); // bottom
+    jumpPad.create(550, 280, 'platform').setDisplaySize(125, 35).refreshBody(); // mid
+    jumpPad.create(500, 600, 'platform').setDisplaySize(125, 35).refreshBody(); // top
+    jumpPad.create(randomX, randomY, 'platform').setDisplaySize(125, 35).refreshBody(); // random platform
+    jumpPad.create(1000, randomY, 'platform').setDisplaySize(125, 35).refreshBody(); // random platform 2.0
 
     // Player
     const player = this.physics.add.sprite(180, 575, 'dude');
-    player.setBounce(0.3);
+    player.setBounce(0.2);
     player.setCollideWorldBounds(true);
-    player.body.setGravityY(100);
+    player.body.setGravityY(200);
     player.setDepth(1);
 
     // Animations
@@ -96,11 +96,12 @@ class Scene1 extends Phaser.Scene {
     this.physics.add.collider(this.powerUpGroup, jumpPad);
     this.physics.add.collider(this.powerUpGroup, pad);
     this.physics.add.overlap(player, this.powerUpGroup, this.collectPowerUp, null,this);
+    this.physics.world.createDebugGraphic();
 
     // Fire group
     this.fires = this.physics.add.group();
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
       const fire = this.fires.create(
         Phaser.Math.Between(100, 900),
         Phaser.Math.Between(0, 700),
@@ -113,7 +114,7 @@ class Scene1 extends Phaser.Scene {
         Phaser.Math.Between(-200, 600),
         Phaser.Math.Between(20, 300)
       );
-      fire.setScale(0.085);
+      fire.setScale(0.075);
     }
 
     // Fire collisions
@@ -142,7 +143,7 @@ class Scene1 extends Phaser.Scene {
       player.anims.play('turn');
     }
     if (this.cursors.up.isDown && player.body.touching.down) {
-      player.setVelocityY(-380);
+      player.setVelocityY(-460);
     }
   }
 
@@ -152,7 +153,7 @@ class Scene1 extends Phaser.Scene {
   powerUp.disableBody(true, true);
 
   // score increase
-  this.score += 50;
+  this.score += 30;
   this.scoreText.setText('Score: ' + this.score);
 
   // Respawns the powerUp
@@ -177,3 +178,4 @@ class Scene1 extends Phaser.Scene {
     player.anims.play('turn');
   }
 }
+
