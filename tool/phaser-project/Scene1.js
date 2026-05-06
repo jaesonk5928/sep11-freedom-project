@@ -19,7 +19,7 @@ class Scene1 extends Phaser.Scene {
     // GAME STATES
     this.deadNow = false;
     this.winnerS = false;
-    this.winScore = 1200;
+    this.winScore = 800;
 
     // Background
     const back = this.add.image(800, 300, 'background');
@@ -202,7 +202,7 @@ class Scene1 extends Phaser.Scene {
     var death = this.add.rectangle(400, 300, 800, 600, 0x000000, 1);
     death.setScale(2);
 
-    this.add.text(600, 300, 'YOU DIED', {
+    this.add.text(600, 300, 'YOU SUCK B0Z0!', {
       fontSize: '64px',
       fill: '#ff0000'
     }).setOrigin(0.5);
@@ -221,7 +221,7 @@ class Scene1 extends Phaser.Scene {
     var win = this.add.rectangle(400, 300, 800, 600, 0x000000, 1);
     win.setScale(2);
 
-    this.add.text(600, 300, 'YOUR SO AMAZING!', {
+    this.add.text(600, 300, "YOU'RE AMAZING!", {
       fontSize: '64px',
       fill: '#00ff00'
     }).setOrigin(0.5);
