@@ -364,16 +364,16 @@ class Scene1 extends Phaser.Scene {
     player.setTint(0xff0000);
     player.anims.play('turn');
 
-    var death = this.add.rectangle(400, 300, 800, 600, 0x000000, 0.8);
+    var death = this.add.rectangle(400, 300, 800, 600, 0x000000, 0.9);
     death.setScale(2);
 
     // Death text
-    this.add.text(400, 260, 'You Died', {
+    this.add.text(600, 300, 'You Died', {
       fontSize: '64px',
       fill: '#ff0000'
     }).setOrigin(0.5);
 
-    this.add.text(400, 340, 'Press R to Restart', {
+    this.add.text(600, 350, 'Press R to Restart', {
       fontSize: '28px',
       fill: '#ffffff'
     }).setOrigin(0.5);
