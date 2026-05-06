@@ -554,8 +554,8 @@ class Scene1 extends Phaser.Scene {
     this.score += 30;
     this.scoreText.setText('Score: ' + this.score);
 
-    // 🏆 WIN CHECK
-    if (this.score >= this.winScore && !this.hasWon) {
+    // function that checks if you win
+    if (this.score >= this.winScore && !this.winnerS) {
       this.triggerWin();
       return;
     }
@@ -577,8 +577,8 @@ class Scene1 extends Phaser.Scene {
   }
 
   hitFire(player, fire) {
-    if (this.isDead || this.hasWon) return;
-    this.isDead = true;
+    if (this.deadNow || this.hasWon) return;
+    this.deadNow = true;
 
     this.physics.pause();
 
