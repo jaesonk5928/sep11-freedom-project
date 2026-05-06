@@ -307,7 +307,7 @@ class Scene1 extends Phaser.Scene {
     this.physics.add.collider(this.fires, pad);
     this.physics.add.collider(this.fires, jumpPad);
 
-    // 🔥 Player hits fire
+    // if Player hits fire
     this.physics.add.collider(player, this.fires, this.hitFire, null, this);
 
     this.cursors = this.input.keyboard.createCursorKeys();
@@ -373,7 +373,7 @@ class Scene1 extends Phaser.Scene {
       fill: '#ff0000'
     }).setOrigin(0.5);
 
-    this.add.text(600, 350, 'Press R to Restart', {
+    this.add.text(600, 350, 'Press R to restart', {
       fontSize: '28px',
       fill: '#ffffff'
     }).setOrigin(0.5);
