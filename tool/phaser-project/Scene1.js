@@ -196,7 +196,7 @@ class Scene1 extends Phaser.Scene {
   }
 
   create() {
-    this.isDead = false; // ✅ prevent multiple death triggers
+    this.isDead = false; // prevents multiple death triggers
 
     // Background
     const back = this.add.image(800, 300, 'background');
@@ -364,10 +364,11 @@ class Scene1 extends Phaser.Scene {
     player.setTint(0xff0000);
     player.anims.play('turn');
 
-    this.add.rectangle(400, 300, 800, 600, 0x000000, 0.7);
+    var death = this.add.rectangle(400, 300, 800, 600, 0x000000, 0.8);
+    death.setScale(2);
 
     // Death text
-    this.add.text(400, 260, 'YOU DIED', {
+    this.add.text(400, 260, 'You Died', {
       fontSize: '64px',
       fill: '#ff0000'
     }).setOrigin(0.5);
