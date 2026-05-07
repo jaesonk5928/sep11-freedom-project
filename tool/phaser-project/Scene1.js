@@ -48,7 +48,7 @@ class Scene1 extends Phaser.Scene {
     jumpPad.create(randomX, randomY, 'platform').setDisplaySize(125, 35).refreshBody();
     jumpPad.create(1000, randomY, 'platform').setDisplaySize(125, 35).refreshBody();
 
-    // adds 
+    // adds functions to player (physics )
     this.player = this.physics.add.sprite(180, 575, 'dude');
     this.player.setBounce(0.2);
     this.player.setCollideWorldBounds(true);
