@@ -4,13 +4,14 @@
 * Did you know that the first ever platformer game made was **Donkey Kong (1981)**? If 10+ people are amazed, execute & move on with my  product (to explain).
 
 ## Product
-* Present & explain my product first?, then go to the next slides to show detailed, but short code snippets on the main components of my game. For example,
+* Present & explain my product (made by Phaser) first?, then go to the next slides to show detailed, but short code snippets on the main components of my game. For example,
   * Show them the code for making platforms & it's collision wth the player
-  * The player's sprite code and it's animations with keys.
-  * Fire bounciness & 
+  * The player's sprite code and it's animations with keys
+  * Fire bounciness & it's execution collision on the player
+  * Win/death screen
 
 ## Process
-*
+* How I've learned Phaser's systems and it's components of coding. Maybe I can show the playlist I've been using as a reference to build my Freedom Project. Or show the Phaser app that also guided me to make my game. Use 
 
 ## Conclusion
 *
