@@ -80,17 +80,18 @@ class Scene1 extends Phaser.Scene {
       this.scene.restart();
     });
 
-    // adds collision for both platform 
+    // adds collision for both platform
     this.physics.add.collider(this.player, pad);
     this.physics.add.collider(this.player, jumpPad);
 
-    // PowerUps
+    // adds powerUps
     this.powerUpGroup = this.physics.add.group({
       key: 'powerUp',
       repeat: 50,
       setXY: { x: 300, y: 800, stepX: 200 }
     });
 
+    // groups the powerUp function
     this.powerUpGroup.getChildren().forEach(powerUp => {
       powerUp.setPosition(
         Phaser.Math.Between(200, 1000),
@@ -113,7 +114,7 @@ class Scene1 extends Phaser.Scene {
       this
     );
 
-    // Fire group
+    // the fire group
     this.fires = this.physics.add.group();
     for (let i = 0; i < 4; i++) {
       const fire = this.fires.create(
@@ -145,6 +146,7 @@ class Scene1 extends Phaser.Scene {
     this.cursors = this.input.keyboard.createCursorKeys();
   }
 
+  // cursors for arrow key to move the character
   update() {
     if (this.isDead || this.hasWon) return;
 
@@ -193,6 +195,7 @@ class Scene1 extends Phaser.Scene {
     });
   }
 
+  // THIS section is about win/death screen
   hitFire(player, fire) {
     if (this.deadNow || this.hasWon) return;
     this.deadNow = true;
