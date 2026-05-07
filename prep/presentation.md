@@ -1,7 +1,7 @@
 # Presentation Plan
 
 ## Hook
-* Did you know that Mario 
+* Did you know that 
 
 ## Product
 *
