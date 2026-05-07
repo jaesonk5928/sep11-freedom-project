@@ -1,10 +1,10 @@
 # Presentation Plan
 
 ## Hook
-* Did you know that 
+* Did you know that the first ever platformer game made was **Donkey Kong (1981)**? If 10+ people are amazed, execute & move on with my  product (to explain).
 
 ## Product
-*
+* 
 
 ## Process
 *
