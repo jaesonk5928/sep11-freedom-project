@@ -11,10 +11,10 @@
   * Win/death screen
 
 ## Process
-* How I've learned Phaser's systems and it's components of coding. Maybe I can show the playlist I've been using as a reference to build my Freedom Project. Or show the Phaser app that also guided me to make my game. Use 
+* How I've learned Phaser's systems and it's components of coding. Maybe I can show the playlist I've been using as a reference to build my Freedom Project. Or show the Phaser app that also guided me to make my game. Might use my barely working (Bare minimum) **MVP** as an example of growth development. Also I could use what we learned in unit 1 (javascript) and tie it to my game (**like loops & functions**)
 
 ## Conclusion
-*
+* End it off with a summary that wraps up my game's functions and mechanics to tie it back to Phaser and Javascript. After that, explain my takeaways that should be pretty short but accurate to my coding journey during Freedom Project. 
 
 <!-- EXAMPLE
 
