@@ -1,16 +1,16 @@
 # Presentation Plan
 
 ## Hook
-* 
+* Did you know that Mario 
 
 ## Product
-* 
+*
 
 ## Process
-* 
+*
 
 ## Conclusion
-* 
+*
 
 <!-- EXAMPLE
 
