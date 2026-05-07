@@ -4,7 +4,10 @@
 * Did you know that the first ever platformer game made was **Donkey Kong (1981)**? If 10+ people are amazed, execute & move on with my  product (to explain).
 
 ## Product
-* Present & explain my product first?, then go to the next slides to show detailed, but short code snippets on the main components 
+* Present & explain my product first?, then go to the next slides to show detailed, but short code snippets on the main components of my game. For example,
+  * Show them the code for making platforms & it's collision wth the player
+  * The player's sprite code and it's animations with keys.
+  * Fire bounciness & 
 
 ## Process
 *
