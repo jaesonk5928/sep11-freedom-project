@@ -4,6 +4,7 @@ class Scene1 extends Phaser.Scene {
     this.powerUps = [];
   }
 
+  // loads in all images/spritesheets in assests
   preload() {
     this.load.image('background', 'assets/images/back.png');
     this.load.image('platform', 'assets/images/platform.png');
@@ -16,12 +17,12 @@ class Scene1 extends Phaser.Scene {
   }
 
   create() {
-    // GAME STATES
+    // game functions (specific time frames)
     this.deadNow = false;
     this.winnerS = false;
     this.winScore = 800;
 
-    // Background
+    // sets the background
     const back = this.add.image(800, 300, 'background');
     back.setScale(3);
     back.setDepth(-1);
@@ -29,7 +30,7 @@ class Scene1 extends Phaser.Scene {
     let randomX = Phaser.Math.Between(200, 300);
     let randomY = Phaser.Math.Between(300, 400);
 
-    // Score
+    // counts the score
     this.score = 0;
     this.scoreText = this.add.text(16, 16, 'Score: 0', {
       fontSize: '32px',
@@ -79,7 +80,7 @@ class Scene1 extends Phaser.Scene {
       this.scene.restart();
     });
 
-    // Colliders
+    // adds collision for both platform 
     this.physics.add.collider(this.player, pad);
     this.physics.add.collider(this.player, jumpPad);
 
