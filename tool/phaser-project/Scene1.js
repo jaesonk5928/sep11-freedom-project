@@ -48,13 +48,13 @@ class Scene1 extends Phaser.Scene {
     jumpPad.create(randomX, randomY, 'platform').setDisplaySize(125, 35).refreshBody();
     jumpPad.create(1000, randomY, 'platform').setDisplaySize(125, 35).refreshBody();
 
-    // Player
+    // adds 
     this.player = this.physics.add.sprite(180, 575, 'dude');
     this.player.setBounce(0.2);
     this.player.setCollideWorldBounds(true);
     this.player.body.setGravityY(200);
 
-    // Animations
+    // the created sprite animations
     this.anims.create({
       key: 'left',
       frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
@@ -73,7 +73,7 @@ class Scene1 extends Phaser.Scene {
       repeat: -1
     });
 
-    // Restart
+    // Press r to restart
     this.input.keyboard.on('keydown-R', () => {
       this.scene.restart();
     });
