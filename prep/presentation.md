@@ -1,20 +1,24 @@
 # Presentation Plan
 
 ## Hook
-* Did you know that the first ever platformer game made was **Donkey Kong (1981)**? If 10+ people are amazed, execute & move on with my  product (to explain).
+* Did you know that the first ever platformer game made was **Donkey Kong (1981)**?
 
 ## Product
-* Present & explain my product (made by Phaser) first?, then go to the next slides to show detailed, but short code snippets on the main components of my game. For example,
+* Present & explain my product (made by Phaser)
+
+## Process
+* How I've learned Phaser's systems and it's components of coding. Maybe I can show the playlist I've been using as a reference to build my Freedom Project. Or show the Phaser app that also guided me to make my game. Might use my barely working (Bare minimum) **MVP** as an example of growth development. Also I could use what we learned in unit 1 (javascript) and tie it to my game (**like loops & functions**) then go to the next slides to show detailed, but short code snippets on the main components of my game. For example,
   * Show them the code for making platforms & it's collision wth the player
   * The player's sprite code and it's animations with keys
   * Fire bounciness & it's execution collision on the player
   * Win/death screen
 
-## Process
-* How I've learned Phaser's systems and it's components of coding. Maybe I can show the playlist I've been using as a reference to build my Freedom Project. Or show the Phaser app that also guided me to make my game. Might use my barely working (Bare minimum) **MVP** as an example of growth development. Also I could use what we learned in unit 1 (javascript) and tie it to my game (**like loops & functions**)
-
 ## Conclusion
-* End it off with a summary that wraps up my game's functions and mechanics to tie it back to Phaser and Javascript. After that, explain my takeaways that should be pretty short but accurate to my coding journey during Freedom Project. 
+* End it off with a summary that wraps up my game's functions and mechanics to tie it back to Phaser and Javascript. After that, explain my takeaways that should be pretty short but accurate to my coding journey during Freedom Project.
+* Takeaways:
+  * Always use resources for the topic as a reference (example, Phaser website, youtube videos, google, etc)
+  * Being stuck on a problem is normal, as learning code overnight is very challanging. Rewatching videos ar a good example
+  * Prioritize the bigger components first, as doing so will help you move along faster then doing the small features first.
 
 <!-- EXAMPLE
 
