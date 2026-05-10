@@ -207,7 +207,7 @@ class Scene1 extends Phaser.Scene {
     var death = this.add.rectangle(400, 300, 800, 600, 0x000000, 1);
     death.setScale(2);
 
-    this.add.text(600, 300, 'YOU SUCK B0Z0!', {
+    this.add.text(600, 300, 'GAME OVER!', {
       fontSize: '64px',
       fill: '#ff0000'
     }).setOrigin(0.5);
