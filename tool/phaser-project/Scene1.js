@@ -87,7 +87,7 @@ class Scene1 extends Phaser.Scene {
     // adds powerUps
     this.powerUpGroup = this.physics.add.group({
       key: 'powerUp',
-      repeat: 50,
+      repeat: 100,
       setXY: { x: 300, y: 800, stepX: 200 }
     });
 
