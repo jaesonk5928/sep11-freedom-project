@@ -327,7 +327,7 @@ class Scene1 extends Phaser.Scene {
 
     // spawn powerUps with delay
     this.time.addEvent({
-      delay: 500,
+      delay: 300,
       callback: this.spawnPowerUp,
       callbackScope: this,
       loop: true
