@@ -116,7 +116,7 @@ class Scene1 extends Phaser.Scene {
 
     // the fire group
     this.fires = this.physics.add.group();
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
       const fire = this.fires.create(
         Phaser.Math.Between(100, 1000),
         Phaser.Math.Between(0, 800),
