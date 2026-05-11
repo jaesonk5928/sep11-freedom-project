@@ -170,7 +170,7 @@ class Scene1 extends Phaser.Scene {
   collectPowerUp(player, powerUp) {
     powerUp.disableBody(true, true);
 
-    this.score += 10;
+    this.score += 1;
     this.scoreText.setText('Score: ' + this.score);
 
     // function that checks if you win
