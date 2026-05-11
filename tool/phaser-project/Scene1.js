@@ -170,8 +170,8 @@ class Scene1 extends Phaser.Scene {
   collectPowerUp(player, powerUp) {
     powerUp.disableBody(true, true);
 
-    this.score += 30;
-    this.scoreText.setText('Score: ' + this.score + ' (Score 800+ to win)');
+    this.score += 10;
+    this.scoreText.setText('Score: ' + this.score);
 
     // function that checks if you win
     if (this.score >= this.winScore && !this.winnerS) {
@@ -226,7 +226,7 @@ class Scene1 extends Phaser.Scene {
     var win = this.add.rectangle(400, 300, 800, 600, 0x000000, 1);
     win.setScale(2);
 
-    this.add.text(600, 300, "YOU WON!", {
+    this.add.text(600, 300, "YOU WIN!", {
       fontSize: '64px',
       fill: '#00ff00'
     }).setOrigin(0.5);
