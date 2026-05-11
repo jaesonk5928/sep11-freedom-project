@@ -20,7 +20,7 @@ class Scene1 extends Phaser.Scene {
     // game functions (specific time frames)
     this.deadNow = false;
     this.winnerS = false;
-    this.winScore = 800;
+    this.winScore = 1000;
 
     // sets the background
     const back = this.add.image(800, 300, 'background');
@@ -170,8 +170,8 @@ class Scene1 extends Phaser.Scene {
   collectPowerUp(player, powerUp) {
     powerUp.disableBody(true, true);
 
-    this.score += 1;
-    this.scoreText.setText('Score: ' + this.score);
+    this.score += 25;
+    this.scoreText.setText('Score: ' + this.score + ' (Get 1000 points to win)');
 
     // function that checks if you win
     if (this.score >= this.winScore && !this.winnerS) {
@@ -180,7 +180,7 @@ class Scene1 extends Phaser.Scene {
     }
 
     // respawn
-    this.time.delayedCall(3000, () => {
+    this.time.delayedCall(5000, () => {
       powerUp.enableBody(
         true,
         Phaser.Math.Between(50, 800),
