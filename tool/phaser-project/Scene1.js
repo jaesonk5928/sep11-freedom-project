@@ -180,7 +180,7 @@ class Scene1 extends Phaser.Scene {
     }
 
     // respawn
-    this.time.delayedCall(8000, () => {
+    this.time.delayedCall(3000, () => {
       powerUp.enableBody(
         true,
         Phaser.Math.Between(50, 800),
