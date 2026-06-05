@@ -1,16 +1,16 @@
 # SEP11 Freedom Project
-by **X**
+by **Jaeson Kwan**
 
 ## Context
 I am a student at [HSTAT](https://www.hstat.org/) in the [Software Engineering Program](https://hstatsep.github.io/). The "Freedom Project" for SEP11 is a year-long project all about making something using JavaScript along with a third-party JS tool.
 
-For my project, I chose to independently study **X** in order to help me make **X**.
+For my project, I chose to independently studied **Phaser** in order to help me make my **game**.
 
 ## Links
 
-[Product]()
+[Product](https://jaesonk5928.github.io/sep11-freedom-project/tool/phaser-project/)
 
-[Presentation]()
+[Presentation](https://docs.google.com/presentation/d/1p5GPoYv7ys40wIHITtTS5MA85IdAVzSC-cTGqmR1ANY/edit?slide=id.g3e0853f7fab_0_0#slide=id.g3e0853f7fab_0_0)
 
 ## Implications
 ##### PROS
