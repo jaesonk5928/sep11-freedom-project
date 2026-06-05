@@ -11,9 +11,29 @@ Currently, I am writing this blog after presenting my **Freedom Project**. Durin
 * Explained **in detail** what were my takeaways during the project.
 
 During the **in-class** [presentaton](https://docs.google.com/presentation/d/1p5GPoYv7ys40wIHITtTS5MA85IdAVzSC-cTGqmR1ANY/edit?slide=id.g3e0853f7fab_0_0#slide=id.g3e0853f7fab_0_0), I explained my game & it was about collecting powerups and to avoid the fire to win. I've also described the methods of learning my tool during the school year, such as:
-* The **Phaser Website** [documentary](https://phaser.io/tutorials/making-your-first-phaser-3-game/part4) (which helped significantly)
-* Youtube tutorial [playlists](https://www.youtube.com/watch?v=U0K0YTifb1w&list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&index=5). This specific linked one also helped me a ton.
-* **Slack**, other peers that use Phaser (like Gabriel) helped me solve problems in my code that I could understand how to fix easily. 
+
+* The **Phaser Website** [Documentary](https://phaser.io/tutorials/making-your-first-phaser-3-game/part4) (which helped significantly)
+* Youtube [playlists](https://www.youtube.com/watch?v=U0K0YTifb1w&list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&index=5). <-- This specific linked one also helped me a ton.
+* **Slack**, other peers that use Phaser (like _Gabriel_) helped me solve problems in my code that I could understand how to fix easily.
+
+My **takeaways** during the in-class presentation are:
+* Don't be pressured to speak perfectly.
+  * Everyone can be scared to present in front of lots of people, causing them to stutter. That's normal.
+* Take feedback seriously to try to improve.
+  * Getting feedback from peers helped me improve both my **FP MVP** & **presentation**.
+
+My **takeaways** during the _EXPO_ presentation are:
+* Other people's projects can be cooler then others.
+  * This doesn't mean your'e a bad coder. It just means they put more effort into their project (or **AI**).
+* Be proud of yourself for presenting your project during the Expo to others & Aluminis.
+  * This helps you develop many skills in the real world, like
+    * Public Speaking
+    * Communication
+    * Professionalism
+
+### 
+
+
 
 
 [Previous](entry05.md) | [Next](entry07.md)
