@@ -32,7 +32,7 @@ My **takeaways** during the _EXPO_ presentation are:
     * Professionalism
 
 ### EDP (Engineering Design Process)
-Since I'm on my 6th & final **blog entry**, I'm on Step 6 of the EDP: "**Create a prototype**". During **Blog 4** & **Step 4**, I thought of the most promising solution that could help with social media **safety**. I chose: You have to do a "**double verification**" feature to people you don't trust. This might exist already, but this one is more _strict_. Now you have to know their **b-day/age** and recent posts. My **prototype** is a pop-up menu "feature" that can be added to any current SM apps.
+Since I'm on my 6th & final **blog entry**, I'm on Step 6 of the EDP: "**Test and evaluate the prototype**". When I wanted to make a "**double verification**" feature to people you don't trust. It possibly worked, but many people would complain about it's inconvience everytime they text someone. So I re-evaluate my solution, so the _pop-up_ wouldn't execute if you verify the person who you would text. 
 
 ### Skills
 Skills that I've worked on are **Organization** and **Embracing Failure**.
