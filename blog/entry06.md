@@ -32,17 +32,16 @@ My **takeaways** during the _EXPO_ presentation are:
     * Professionalism
 
 ### EDP (Engineering Design Process)
-Since I'm on my 6th & final **blog entry**, I'm on Step 6 of the EDP: "**Test and evaluate the prototype**". When I wanted to make a "**double verification**" feature to people you don't trust. It possibly worked, but many people would complain about it's inconvience everytime they text someone. So I re-evaluate my solution, so the _pop-up_ wouldn't execute if you verify the person who you would text. 
+Since I'm on my 6th & final **blog entry**, I'm on Step 6 of the EDP: "**Test and evaluate the prototype**". When I wanted to make a "**double verification**" feature to people you don't trust. It possibly worked, but many people would complain about it's inconvience everytime they text someone. So I re-evaluate my solution, so the _pop-up_ wouldn't execute if you verify the person who you would text.
 
 ### Skills
-Skills that I've worked on are **Organization** and **Embracing Failure**.
+Before writing this blog, I've worked on the **Communication** skill and **Growth Mindset** skill.
 
-#### Organization
-I improved on **Organization** by marking important _homeworks_ & _events_. For example, I had so much homework during Spring break, so before it started, I've marked every single homework & make a to-do list when I should do each homework. It was very smooth after on.
+#### Communication
+I improved more on this skill by the **Mock interview event** from Deloitte! It helped me with my confidence talk with staff from that job. Also the **field trip** contributed to improving my skills.
 
-#### Embracing Failure
-I improved on **Embracing Failure**. These past weeks, when I wass struggling to do my **Freedom Project**, asking others on _Slack_ & in-person about my "broken code" helped me understand what I was doing wrong and how to fix my mistakes. This caused me to be more motivated on coding.
-
+#### Growth Mindset
+I improved more on **Growth Mindset**. Before the Geometry test, I thought I knew how to do the work. The 
 
 
 
