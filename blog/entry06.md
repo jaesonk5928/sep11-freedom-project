@@ -31,7 +31,17 @@ My **takeaways** during the _EXPO_ presentation are:
     * Communication
     * Professionalism
 
-### 
+### EDP (Engineering Design Process)
+Since I'm on my 6th & final **blog entry**, I'm on Step 6 of the EDP: "**Create a prototype**". During **Blog 4** & **Step 4**, I thought of the most promising solution that could help with social media **safety**. I chose: You have to do a "**double verification**" feature to people you don't trust. This might exist already, but this one is more _strict_. Now you have to know their **b-day/age** and recent posts. My **prototype** is a pop-up menu "feature" that can be added to any current SM apps.
+
+### Skills
+Skills that I've worked on are **Organization** and **Embracing Failure**.
+
+#### Organization
+I improved on **Organization** by marking important _homeworks_ & _events_. For example, I had so much homework during Spring break, so before it started, I've marked every single homework & make a to-do list when I should do each homework. It was very smooth after on.
+
+#### Embracing Failure
+I improved on **Embracing Failure**. These past weeks, when I wass struggling to do my **Freedom Project**, asking others on _Slack_ & in-person about my "broken code" helped me understand what I was doing wrong and how to fix my mistakes. This caused me to be more motivated on coding.
 
 
 
