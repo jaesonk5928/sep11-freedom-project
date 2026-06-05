@@ -41,9 +41,7 @@ Before writing this blog, I've worked on the **Communication** skill and **Growt
 I improved more on this skill by the **Mock interview event** from Deloitte! It helped me with my confidence talk with staff from that job. Also the **field trip** contributed to improving my skills.
 
 #### Growth Mindset
-I improved more on **Growth Mindset**. Before the Geometry test, I thought I knew how to do the work. The 
-
-
+I improved more on **Growth Mindset**. Before the Geometry test, I thought I knew how to do the work. But I struggled to study mutiple topics at once. That why I had courage to ask my teachers for help, such as re-doing the material's fundamentals.
 
 [Previous](entry05.md) | [Next](entry07.md)
 
