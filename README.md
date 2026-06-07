@@ -14,10 +14,22 @@ For my project, I chose to independently studied **Phaser** in order to help me 
 
 ## Implications
 ##### PROS
-* 
+* I learned how to use the Phaser "_game devlopment_" website to code games individually.
+  *  Concepts such as **sprites**, **animations**, **collisions** are used in most games to display smoothiness.
+  *  Reading the documentation helped me improve how to interpret words more quickly & create something new. 
+* I applied what I learned in the Javascript unit (SEP 11) to emphasize the Phaser experience of coding.
+  * Using **conditionals**, **loops**, and **arrays** helps expands Phaser's capabilities of game development. 
+* I developed many skills from learning Phaser, such as debugging errors, like an image's hitbox inconsistancy when using `displaySize` .
+  * Using other peoples' feedback on my game contributes to my understanding of making a game, since improving the game's quality will increase in usability.  
 ##### CONS
-* 
-
+* Learning Phaser required a significant amount of time and research.
+  * Many videos that I've reviewed were either too complex or too long. 
+* Debugging errors in JavaScript and Phaser was sometimes difficult and time-consuming.
+  * After recieving feedback from peers, the Beyond MVP wasn't instantly fixed, as I had to re-adjust my code many times just to not output errors.   
+* Some features were challenging to implement due to my limited experience with game development.
+  * Even though coding many features seems "_fun_", the amount of code needed to make them work was tedious. 
+* Limited project time made it difficult to add every feature I wanted.
+  * Even though the time-frame for making my "game" project was almost a year, I couldn't use my time wisely to start building a game that was working till I started ti lock in. I know many of my peers also **procrasinated** during the year too. 
 
 ## Blog
 Below you will find my blog about how I made my project.
